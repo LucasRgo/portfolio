@@ -16,7 +16,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/"
+          path="/lucas-portfolio/"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
