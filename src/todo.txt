@@ -1,0 +1,67 @@
+3. Build Pages
+
+    Home Page:
+        Add a brief bio.
+        Display certificates with icons and descriptions.
+
+    Projects Page:
+        Create a ProjectCard component to display each project’s name, description, and links/screenshots.
+        Use a grid or list layout for visual clarity.
+
+    Resume Page:
+        Format your curriculum details.
+        Add a "Download Resume" button.
+
+4. Build the Persistent Contact Button
+
+    Create a ContactButton component.
+    Add the following features:
+        A floating button positioned at the bottom right (use CSS position: fixed).
+        On click, expand to reveal:
+            Your email with a copy-to-clipboard button.
+            Icons/links to GitHub, LinkedIn, and Instagram.
+
+import React, { useState } from "react";
+
+function ContactButton() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleContact = () => setIsOpen(!isOpen);
+
+  return (
+    <div style={{ position: "fixed", bottom: "20px", right: "20px" }}>
+      <button onClick={toggleContact} style={{ padding: "10px", borderRadius: "50%" }}>
+        {isOpen ? "X" : "Contact"}
+      </button>
+      {isOpen && (
+        <div style={{ background: "#f0f0f0", padding: "10px", borderRadius: "10px", marginTop: "10px" }}>
+          <p>
+            Email: <span>your.email@example.com</span>
+            <button onClick={() => navigator.clipboard.writeText("your.email@example.com")}>Copy</button>
+          </p>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default ContactButton;
+
+5. Style the Website
+
+    Apply a consistent color scheme and typography.
+    Ensure buttons, links, and layouts are responsive using media queries or a CSS framework.
+
+6. Test and Optimize
+
+    Test navigation and button functionality.
+    Check for mobile responsiveness.
+    Optimize images and assets for performance.
+
+7. Deploy
+
+    Build the project using npm run build.
+    Deploy to a platform like Netlify, Vercel, or GitHub Pages.

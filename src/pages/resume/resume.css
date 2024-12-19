@@ -1,0 +1,44 @@
+/* Container for the resume section */
+.resume-container {
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle, rgb(92, 92, 92), rgb(27, 27, 27));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the download link */
+.resume-download {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 9rem;
+    position: relative;
+    color: lightblue;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #ffffff, #82e2e5, #005d81);
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    background: transparent;
+}
+
+.resume-download:hover {
+    background: linear-gradient(45deg, #ffffff, #82e2e5, #005d81);
+    color: #000;
+}
+
+/* Container for the iframe */
+.resume-iframe-container {
+    margin-top: 20px;
+}
+
+/* Style for the embedded iframe */
+.resume-iframe {
+    width: 90%;
+    height: 2200px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}

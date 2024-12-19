@@ -1,0 +1,140 @@
+.technologies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  padding: 2rem;
+  background: linear-gradient(120deg,
+    rgba(0, 0, 0, 1),
+    rgba(0, 113, 189, 0.3),
+    rgba(0, 0, 0, 1)
+  );
+  background-size: 1200% 1200%;
+  animation: gradientMove 10s ease-in-out infinite;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.technologies-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  position: relative;
+  background: linear-gradient(45deg,
+    #c0c0c0d2,
+    #5296b1,
+    #285e8a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.technologies-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.technology-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 8px 32px 0 var(--shadow-color),
+    0 4px 8px 0 var(--shadow-color);
+}
+
+.technology-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 12px 40px 0 var(--shadow-color),
+    0 6px 12px 0 var(--shadow-color);
+}
+
+.technology-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.technology-details h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.technology-proficiency {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.proficiency-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.proficiency-dot.filled {
+  background-color: var(--card-color);
+}
+
+@media (max-width: 768px) {
+  .technologies-container {
+      padding: 1rem; /* Reduce padding on small screens */
+  }
+
+  .technologies-title {
+      font-size: 2rem; /* Adjust font size for mobile */
+      margin-bottom: 2rem; /* Reduce space between title and cards */
+  }
+
+  .technologies-wrapper {
+      width: 100%;
+      padding: 0 1rem; /* Add some padding for mobile */
+  }
+
+  .technologies-grid {
+      grid-template-columns: repeat(2, 1fr); /* Fit 3 items per row */
+      gap: 1.5rem; /* Reduce gap between the cards */
+  }
+
+  .technology-card {
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .technology-icon {
+      font-size: 3rem; /* Adjust icon size for mobile */
+  }
+
+  .technology-details h3 {
+      font-size: 1.3rem; /* Adjust heading size */
+  }
+
+  .technology-proficiency {
+      gap: 0.3rem; /* Reduce gap between proficiency dots */
+  }
+
+  .proficiency-dot {
+      width: 10px; /* Adjust the size of proficiency dots */
+      height: 10px;
+  }
+}

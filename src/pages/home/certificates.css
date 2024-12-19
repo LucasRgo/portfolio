@@ -1,0 +1,110 @@
+.certificates-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 65vh;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(72, 203, 255, 0.5) 0%,
+        rgba(18, 18, 18, 0.8) 50%,
+        rgba(18, 18, 18, 1) 100%
+    );
+    background-size: 200% 100%; /* Makes the gradient wider */
+    background-position: center;
+    color: #f4f4f4;
+    overflow-x: hidden;
+
+}
+.certificates-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+    background: linear-gradient(45deg,
+        #ffffffd2,
+        #5296b1,
+        #094c83);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.certificates-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 3px;
+    background: linear-gradient(45deg,
+        #c0c0c0d2,
+        #5296b1,
+        #285e8a);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.certificate-card {
+    background-color: #1e1e1e4b;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(4, 94, 138, 0.4);
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(40, 94, 138, 0.8);
+}
+
+.certificate-image {
+    width: 100%;
+    aspect-ratio: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.certificate-image:hover {
+    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-title {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .certificates-section {
+        padding: 1rem;
+    }
+    .certificates-grid {
+        grid-template-columns: 1fr; /* Keeps one certificate per row */
+        gap: 1.5rem; /* Adjust the gap between certificates */
+    }
+
+    .certificate-card {
+        width: 100%; /* Ensure the card takes up the full available width */
+    }
+
+    .certificate-title {
+        font-size: 1.2rem; /* Slightly larger font size for mobile */
+    }
+
+    .certificate-image {
+        object-fit: cover; /* Ensures images fit well in the card */
+        height: 250px; /* Adjust image height to make certificates look wider */
+    }
+    .certificates-title::after {
+        width: 100px;
+    }
+}

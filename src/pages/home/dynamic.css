@@ -1,0 +1,91 @@
+/* Container */
+#dynamic-container {
+    display: flex;
+    align-items: center;
+    background: radial-gradient(
+        circle at right,
+        rgba(0, 108, 151, 0.404) 0%,
+        rgba(0, 0, 0, 0.308) 50%,
+        rgb(0, 0, 0) 100%
+    );
+    overflow: hidden;
+}
+
+#dynamic-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#dynamic-text .h1 {
+    text-align: end;
+    font-family: monospace;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #ffffff, #5296b1, #285e8a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 100px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    /* Container */
+    #dynamic-container {
+        flex-direction: column; /* Stack content vertically */
+        padding: 0 0px; /* Reduce padding on small screens */
+        margin-top: 2rem;
+    }
+
+    #dynamic-row {
+        flex-direction: column; /* Stack the text and carousel */
+        align-items: center; /* Center the content */
+    }
+
+    #dynamic-text .h1 {
+        font-size: 1.8rem; /* Adjust font size for mobile */
+        text-align: center; /* Center the text */
+        margin: 0 0 20px; /* Add margin between text and carousel */
+        line-height: 40px;
+    }
+
+    .carousel-container {
+        width: 100%; /* Full width for the carousel */
+        height: 190px; /* Reduce height for mobile */
+        display: flex;
+        justify-content: center; /* Center the carousel on small screens */
+        padding: 0rem;
+        margin: 0rem;
+    }
+
+    .carousel-image {
+        width: 100%; /* Full width for the image */
+        height: 100%; /* Full height for the image */
+        object-fit: cover; /* Cover the entire space without distortion */
+        object-position: center; /* Ensure the image stays centered */
+    }
+}

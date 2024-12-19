@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    overflow: visible;
+    position: relative;
+}
+
+.projects-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    --webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+#projects {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+    filter: brightness(50%) hue-rotate(30deg) saturate(1.2);
+}
+
+#projects::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, #000000);
+    z-index: 2;
+}
+
+
+.projects-content {
+    text-align: center;
+}
+
+#projects-heading {
+    font-family: monospace;
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #ffffff, #82e2e5, #005d81);
+    --webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#projects-p {
+    font-family: monospace;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+
+.intro-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    backdrop-filter: blur(15px);
+    --webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px 0 rgba(52, 191, 255, 0.342);
+}
+
+
+.my-projects {
+    position: relative;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: black;
+
+}
+
+.my-projects::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 184, 240, 0.6) 15%, rgba(0, 0, 255, 0) 80%);
+    opacity: 0.7;
+    z-index: 0;
+    animation: aurora 30s infinite linear alternate;
+    transform: translate(-35%, -35%);
+    pointer-events: none;
+    filter: blur(60px);
+}
+
+.my-projects::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 114, 61, 0.6) 25%, rgba(0, 0, 155, 0) 70%);
+    opacity: 0.7;
+    z-index: 0;
+    animation: aurora 20s infinite linear alternate;
+    transform: translate(35%, 35%);
+    pointer-events: none;
+    filter: blur(70px);
+}
+
+
+@keyframes aurora {
+    0% {
+        transform: translate(0, 0); /* Start at top-left */
+    }
+    15% {
+        transform: translate(50%, -80%); /* Random position */
+    }
+    30% {
+        transform: translate(-60%, 40%); /* Random position */
+    }
+    45% {
+        transform: translate(90%, -30%); /* Random position */
+    }
+    60% {
+        transform: translate(-30%, 60%); /* Random position */
+    }
+    75% {
+        transform: translate(80%, 20%); /* Random position */
+    }
+    100% {
+        transform: translate(-50%, -50%); /* End in the opposite direction */
+    }
+}
+
+
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    position: relative;
+    z-index: 1; /* Make sure the container is above the background */
+}
+
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #f1f1f1;
+    width: 70vw;
+    height: auto;
+    border-radius: 35px;
+    margin-top: 20px;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 10px 0 rgba(52, 191, 255, 0.342);
+    text-align: center;
+    z-index: 6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 35px 35px 0 0;
+    object-fit: cover;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    z-index: 6;
+}
+
+.project-header h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+    text-justify: inter-word;
+    text-align: left;
+    z-index: 6;
+
+}
+
+.project-title {
+    display: inline;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-justify: inter-word;
+    z-index: 6;
+
+}
+
+.project-subtitle {
+    display: inline;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #d1d1d1;
+    opacity: 0.9;
+    text-justify: inter-word;
+    z-index: 6;
+
+
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #e4e4e4;
+    z-index: 6;
+
+}
+
+@media (min-width: 1024px) {
+    .project-card {
+        width: 60vw; /* Make it even wider on larger screens */
+    }
+}
+
+/* Styles for responsive adjustments on mobile */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        overflow: visible;
+        gap: 2rem;
+        min-height: 70vh;
+    }
+
+    .intro-text {
+        max-width: 90vw;
+        max-height: 60vh;
+    }
+
+    #projects-heading {
+        font-size: 4rem;
+    }
+
+    #projects-p {
+        font-size: 1.5rem;
+    }
+
+    /* Ensure each project takes the full width in smaller screens */
+    .project-card {
+        width: 90vw; /* Increase width on small screens */
+        border-radius: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .project-image {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .project-header h3 {
+        font-size: 1.2rem; /* Adjust title size */
+    }
+
+    .project-title {
+        font-size: 1.4rem; /* Adjust project title size */
+    }
+
+    .project-subtitle {
+        font-size: 1.3rem; /* Adjust subtitle size */
+    }
+
+    .project-content p {
+        font-size: 1rem; /* Adjust description size */
+    }
+}
