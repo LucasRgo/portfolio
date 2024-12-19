@@ -54,6 +54,8 @@ function AnimatedRoutes() {
             </motion.div>
           }
         />
+        {/* Catch-all route to redirect to home */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>
   );
