@@ -32,7 +32,7 @@ const Home = () => {
                         <p>
                             A Full Stack Developer passionate about creating refined and polished web experiences
                         </p>
-                        <button onClick={() => window.location.href = '#contact'} className="contact-button rounded-3">
+                        <button onClick={() => window.location.href = 'mailto:lucas.lrg.0005@gmail.com'} className="contact-button rounded-3">
                             Get in Touch
                         </button>
                     </div>
