@@ -231,6 +231,34 @@
 
 }
 
+.play-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-icon-overlay:hover {
+    opacity: 1;
+}
+
+.play-icon {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
 @media (min-width: 1024px) {
     .project-card {
         width: 60vw; /* Make it even wider on larger screens */
