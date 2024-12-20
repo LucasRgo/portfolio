@@ -15,6 +15,15 @@ const Projects = () => {
         firstProjectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const handlePlayClick = () => {
+        if (project.youtubeUrl.includes('youtu')) {
+            // Open the YouTube video in a new tab
+            window.open(project.youtubeUrl, '_blank');
+        } else {
+            // Open the external website in a new tab
+            window.open(project.youtubeUrl, '_blank');
+        }
+    };
 
     const projects = [
         {
@@ -67,15 +76,7 @@ const Projects = () => {
     ];
 
     const ProjectCard = ({ project }) => {
-        const handlePlayClick = () => {
-            if (project.youtubeUrl.includes('youtu')) {
-                // Open the YouTube video in a new tab
-                window.open(project.youtubeUrl, '_blank');
-            } else {
-                // Open the external website in a new tab
-                window.open(project.youtubeUrl, '_blank');
-            }
-        };
+
 
         return (
             <div className="project-card">
