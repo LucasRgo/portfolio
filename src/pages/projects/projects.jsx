@@ -50,7 +50,7 @@ const Projects = () => {
                 The website not only features a clean and consistent design but also includes interactive elements like a bid calculator and carousels.
                 The standout feature is the contact bar, where users can easily input their contact information, which is then sent directly to the company's email address.`,
             "image": neidi,
-            "youtubeUrl": "https://youtu.be/PSks1SQWFGM"
+            "youtubeUrl": "https://neidicred.com.br"
         },
         {
             "id": 3,
@@ -62,7 +62,7 @@ const Projects = () => {
                 It showcases my ability to seamlessly integrate the backend and frontend, handle user authentication, and manage databases.
                 .`,
             "image": commerce,
-            "youtubeUrl": "https://youtu.be/PSks1SQWFGM"
+            "youtubeUrl": "https://youtu.be/4zg9OpkBTSA?si=v5Ci_eFUqaRnPB1s"
         }
     ];
 
