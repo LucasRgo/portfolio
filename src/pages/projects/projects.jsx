@@ -12,7 +12,6 @@ const Projects = () => {
     const firstProjectRef = useRef(null);
 
     const handleScrollToFirstProject = () => {
-        // Scroll to the first project when the button is clicked
         firstProjectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
