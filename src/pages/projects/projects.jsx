@@ -81,11 +81,9 @@ const Projects = () => {
             <div className="project-card">
                 <div className="project-image-container">
                     <img src={project.image} alt={project.title} className="project-image" />
-                    <div className="play-icon-overlay" onClick={handlePlayClick}>
-                        <i className="play-icon">
-                            {project.youtubeUrl.includes('youtu') ? '▶' : '🌐'}
-                        </i>
-                    </div>
+                    <button className="play-button" onClick={handlePlayClick}>
+                        {project.youtubeUrl.includes('youtu') ? '▶' : '🌐'}
+                    </button>
                 </div>
                 <div className="project-content">
                     <div className="project-header">
@@ -99,6 +97,7 @@ const Projects = () => {
             </div>
         );
     };
+
 
 
     return (
