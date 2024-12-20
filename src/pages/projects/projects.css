@@ -335,7 +335,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     z-index: 7;
 }
