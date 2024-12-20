@@ -16,7 +16,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/lucas-portfolio/"
+          path="/portfolio/home"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -29,7 +29,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/projects"
+          path="/portfolio/projects"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -42,7 +42,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/resume"
+          path="/portfolio/resume"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}

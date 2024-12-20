@@ -77,26 +77,59 @@ const Projects = () => {
             }
         };
 
+        return (
+            <div className="project-card">
+                <div className="project-image-container">
+                    <img src={project.image} alt={project.title} className="project-image" />
+                    <div className="play-icon-overlay" onClick={handlePlayClick}>
+                        <i className="play-icon">
+                            {project.youtubeUrl.includes('youtu') ? '▶' : '🌐'}
+                        </i>
+                    </div>
+                </div>
+                <div className="project-content">
+                    <div className="project-header">
+                        <h3>
+                            <span className="project-title">{project.title}</span>
+                            <span className="project-subtitle"> - {project.subtitle}</span>
+                        </h3>
+                    </div>
+                    <p>{project.description}</p>
+                </div>
+            </div>
+        );
+    };
+
+
     return (
-        <div className="project-card">
-            <div className="project-image-container">
-                <img src={project.image} alt={project.title} className="project-image" />
-                <div className="play-icon-overlay" onClick={handlePlayClick}>
-                    <i className="play-icon">
-                        {project.youtubeUrl.includes('youtu') ? '▶' : '🌐'}
-                    </i>
+        <>
+            <div className="projects-container">
+                <div className="intro-text">
+                    <div className="projects-content">
+                        <h1 id="projects-heading">PROJECTS</h1>
+                        <p id="projects-p">
+                            Here are some of my most prestigious works
+                        </p>
+                        <button
+                            onClick={handleScrollToFirstProject}  // Use this function to scroll
+                            className="contact-button rounded-3"
+                        >
+                            Start the Tour
+                        </button>
+                    </div>
+                </div>
+                <img id="projects" src={a1} alt="Code background" />
+            </div>
+            <div className="my-projects">
+                <div className="projects-container">
+                    {projects.map((project, index) => (
+                        <div key={project.id} ref={index === 0 ? firstProjectRef : null}>
+                            <ProjectCard project={project} />
+                        </div>
+                    ))}
                 </div>
             </div>
-            <div className="project-content">
-                <div className="project-header">
-                    <h3>
-                        <span className="project-title">{project.title}</span>
-                        <span className="project-subtitle"> - {project.subtitle}</span>
-                    </h3>
-                </div>
-                <p>{project.description}</p>
-            </div>
-        </div>
+        </>
     );
 };
 

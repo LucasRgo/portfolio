@@ -11,17 +11,17 @@ function CustomNavbar() {
         <div className="navbar-links">
           <Link
             to="/lucas-portfolio/"
-            className={`nav-link ${location.pathname === '/lucas-portfolio/' ? 'active' : ''}`}>
+            className={`nav-link ${location.pathname === '/portfolio/home' ? 'active' : ''}`}>
             Home
           </Link>
           <Link
             to="/projects"
-            className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`}>
+            className={`nav-link ${location.pathname === '/portfolio/projects' ? 'active' : ''}`}>
             Projects
           </Link>
           <Link
             to="/resume"
-            className={`nav-link ${location.pathname === '/resume' ? 'active' : ''}`}>
+            className={`nav-link ${location.pathname === '/portfolio/resume' ? 'active' : ''}`}>
             Resume
           </Link>
         </div>
