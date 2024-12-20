@@ -321,11 +321,6 @@
     display: inline-block;
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
 .play-icon-overlay {
     position: absolute;
@@ -342,10 +337,12 @@
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 7;
 }
 
 .play-icon-overlay:hover {
     opacity: 1;
+    z-index: 7;
 }
 
 .play-icon {
@@ -353,4 +350,5 @@
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    z-index: 7;
 }
