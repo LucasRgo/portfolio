@@ -244,8 +244,8 @@
     color: black;
     border: none;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,9 +268,11 @@
 
 /* Default span style */
 .play-icon {
-    font-size: 1.8rem;
+    font-size: 5rem;
     font-weight: bold;
     color: black;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 
