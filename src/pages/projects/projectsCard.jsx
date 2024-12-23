@@ -4,10 +4,13 @@ import './projects.css'; // Adjust the path as necessary
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+    useEffect(() => {
+      AOS.init();
+    }, []);
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="project-card">
+        <div className="project-card" data-aos="fade-up" data-aos-delay="500">
             <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
             </div>
