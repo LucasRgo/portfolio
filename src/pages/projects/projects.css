@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
 .projects-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 85vh;
-    overflow: visible;
     position: relative;
+    padding: 2rem;
 }
-
 .projects-container::before {
     content: '';
     position: absolute;
@@ -40,8 +41,15 @@
 
 
 .projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    z-index: 2;
+    gap: 1rem;
 }
+
 
 #projects-heading {
     font-family: monospace;
