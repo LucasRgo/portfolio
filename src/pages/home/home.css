@@ -122,8 +122,6 @@
 .avatar {
     flex-shrink: 0;
 }
-
-/* General styles for smaller screens */
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column;
@@ -167,8 +165,11 @@
         width: 100%;         /* Makes the image fill the width of its container */
         object-position: center; /* Centers the image so the sides are cropped evenly */
     }
+
     .avatar {
-        max-height: 5%; /* Optional: to prevent the image from becoming too large */
-        max-width: auto;  /* Optional: to prevent the image from becoming too large */
+        width: 30%;
+        height: 30%;
+        max-height: 150px; /* Optional: to prevent the image from becoming too large */
+        max-width: 150px; /* Optional: to prevent the image from becoming too large */
     }
 }
