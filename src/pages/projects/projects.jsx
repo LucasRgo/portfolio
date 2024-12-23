@@ -69,7 +69,7 @@ const Projects = () => {
         console.log("button clicked!")
     };
 
-    const ProjectCard = ({ project }) => {
+    const ProjectCard = ({ project, handlePlayClick }) => {
 
 
         return (
