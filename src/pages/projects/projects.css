@@ -75,6 +75,7 @@
     --webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 0 8px 32px 0 rgba(52, 191, 255, 0.342);
+    z-index: 6;
 }
 
 
@@ -235,22 +236,22 @@
     .projects-container {
         flex-direction: column;
         overflow: visible;
-        gap: 2rem;
         min-height: 70vh;
     }
 
     .intro-text {
         max-width: 90vw;
-        max-height: 60vh;
+        max-height: 150px;
     }
 
     #projects-heading {
-        font-size: 4rem;
+        font-size: 15vw;
     }
 
     #projects-p {
-        font-size: 1.5rem;
+        font-size: 5vw;
     }
+
 
     /* Ensure each project takes the full width in smaller screens */
     .project-card {

@@ -104,19 +104,17 @@ const Projects = () => {
     return (
         <>
             <div className="projects-container">
-                <div className="intro-text">
-                    <div className="projects-content">
-                        <h1 id="projects-heading">PROJECTS</h1>
-                        <p id="projects-p">
-                            Here are some of my most prestigious works
-                        </p>
-                        <button
-                            onClick={handleScrollToFirstProject}  // Use this function to scroll
-                            className="contact-button rounded-3"
-                        >
-                            Start the Tour
-                        </button>
-                    </div>
+                <div className="projects-content">
+                    <h1 id="projects-heading">PROJECTS</h1>
+                    <p id="projects-p">
+                        Here are some of my most prestigious works
+                    </p>
+                    <button
+                        onClick={handleScrollToFirstProject}  // Use this function to scroll
+                        className="contact-button rounded-3"
+                    >
+                        Start the Tour
+                    </button>
                 </div>
                 <img id="projects" src={a1} alt="Code background" />
             </div>
