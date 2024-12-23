@@ -178,6 +178,7 @@
 }
 
 .project-image {
+    position: relative;
     width: 100%;
     height: auto;
     border-radius: 35px 35px 0 0;

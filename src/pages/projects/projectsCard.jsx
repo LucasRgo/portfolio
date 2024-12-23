@@ -19,10 +19,10 @@ const ProjectCard = ({ project }) => {
         <div className="project-card" data-aos="fade-up" data-aos-delay="300">
             <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
+                <button id="play" className="btn btn-large btn-outline-light" onClick={handleClick}>
+                        Hello
+                </button>
             </div>
-            <button id="play" className="btn btn-large btn-outline-light" onClick={handleClick}>
-                    Hello
-            </button>
             <div className="project-content">
                 <div className="project-header">
                     <h3>
