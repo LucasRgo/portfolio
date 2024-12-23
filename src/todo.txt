@@ -50,18 +50,3 @@ function ContactButton() {
 
 export default ContactButton;
 
-5. Style the Website
-
-    Apply a consistent color scheme and typography.
-    Ensure buttons, links, and layouts are responsive using media queries or a CSS framework.
-
-6. Test and Optimize
-
-    Test navigation and button functionality.
-    Check for mobile responsiveness.
-    Optimize images and assets for performance.
-
-7. Deploy
-
-    Build the project using npm run build.
-    Deploy to a platform like Netlify, Vercel, or GitHub Pages.
