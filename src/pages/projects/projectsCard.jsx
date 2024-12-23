@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
         <div className="project-card" data-aos="fade-up" data-aos-delay="300">
             <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
-                <button id="play" className="btn play-button" onClick={handleClick}>
+                <button id="play" onClick={handleClick}>
                     <span className="play-icon">▶</span>
                 </button>
             </div>
