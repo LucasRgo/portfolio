@@ -170,9 +170,7 @@
     }
 
     .avatar {
-        width: 30%;
-        height: 30%;
-        max-height: 150px; /* Optional: to prevent the image from becoming too large */
-        max-width: 150px; /* Optional: to prevent the image from becoming too large */
+        max-height: 15vh; /* Optional: to prevent the image from becoming too large */
+        max-width: 30vw; /* Optional: to prevent the image from becoming too large */
     }
 }
