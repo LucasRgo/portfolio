@@ -265,57 +265,57 @@
     }
 }
 
-/* Styles for responsive adjustments on mobile */
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;
         overflow: visible;
-        gap: 2rem;
-        min-height: 70vh;
+        gap: 5%;
+        min-height: 0vh;
     }
 
     .intro-text {
-        max-width: 90vw;
-        max-height: 60vh;
+        max-width: 95%;
+        max-height: 30vh;
     }
 
     #projects-heading {
-        font-size: 4rem;
+        font-size: 8vw;
     }
 
     #projects-p {
-        font-size: 1.5rem;
+        font-size: 4vw;
     }
 
-    /* Ensure each project takes the full width in smaller screens */
     .project-card {
-        width: 90vw; /* Increase width on small screens */
-        border-radius: 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        width: 90%;
+        border-radius: 2vw;
+        margin: 2% auto;
+        padding: 3%;
     }
 
     .project-image {
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 2vw 2vw 0 0;
+        width: 100%;
+        height: auto;
     }
 
     .project-header h3 {
-        font-size: 1.2rem; /* Adjust title size */
+        font-size: 3.5vw;
     }
 
     .project-title {
-        font-size: 1.4rem; /* Adjust project title size */
+        font-size: 4vw;
     }
 
     .project-subtitle {
-        font-size: 1.3rem; /* Adjust subtitle size */
+        font-size: 3vw;
     }
 
     .project-content p {
-        font-size: 1rem; /* Adjust description size */
+        font-size: 2.5vw;
+        line-height: 1.5;
     }
 }
-
 
 .project-image-container {
     position: relative;
