@@ -164,36 +164,14 @@
     }
 
     .avatar {
-        width: 200px !important;
-        height: 200px !important;
+        width: 200px;
+        height: 200px;
     }
 
-.home-container img {
-    object-fit: cover;  /* Ensures the image fills the container while maintaining aspect ratio */
-    height: 100%;        /* Makes the image fill the height of its container */
-    width: 100%;         /* Makes the image fill the width of its container */
-    object-position: center; /* Centers the image so the sides are cropped evenly */
-}
-}
-
-/* Extra small screens */
-@media (max-width: 780px) {
-
-    .intro-text h1 {
-        font-size: 2rem;
-    }
-
-    .intro-text p {
-        font-size: 1rem;
-    }
-
-    .contact-button {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    .avatar {
-        width: 150px !important;
-        height: 150px !important;
+    .home-container img {
+        object-fit: cover;  /* Ensures the image fills the container while maintaining aspect ratio */
+        height: 100%;        /* Makes the image fill the height of its container */
+        width: 100%;         /* Makes the image fill the width of its container */
+        object-position: center; /* Centers the image so the sides are cropped evenly */
     }
 }
