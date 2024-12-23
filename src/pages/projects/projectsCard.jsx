@@ -1,11 +1,12 @@
 // ProjectCard.jsx
-import {React , useEffect } from 'react';
+import {React , useEffect, useState } from 'react';
 import './projects.css'; // Adjust the path as necessary
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 const ProjectCard = ({ project }) => {
+    const wasPlayButtonClicked, SetWasPlayButtonClicked 
 
     useEffect(() => {
         AOS.init();
