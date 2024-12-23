@@ -52,7 +52,7 @@ const Projects = () => {
             "youtubeUrl": "https://neidicred.com.br"
         },
         {
-            "id": 3,
+            "id": 4,
             "title": "CS50 commerce exercise",
             "subtitle": "An auction site where users can create listings, place bids, and manage a watchlist.",
             "description": `
@@ -67,7 +67,7 @@ const Projects = () => {
 
 
     const handlePlayClick = () => {
-        
+        console.log("button clicked!")
     };
 
     const ProjectCard = ({ project }) => {
