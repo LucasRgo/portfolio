@@ -1,38 +1,26 @@
-import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import { pdfjs } from 'react-pdf';
+import React from 'react';
 import resume from '/resume.pdf';
 import './resume.css';
 
-// Configure worker with CDN
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
 const Resume = () => {
-    const [isLoading, setIsLoading] = useState(true);
+    const resumeUrl = `${resume}#zoom=page-width`;
 
     return (
         <div className="resume-container">
             <a
-                href={resume}
+                href={resumeUrl}
                 download="RESUME Lucas R Goveia - Fullstack Developer.pdf"
                 className="resume-download"
             >
                 Download PDF Resume
             </a>
 
-            <div className="resume-viewer">
-                {isLoading && <div className="loading">Loading...</div>}
-                <Document
-                    file={resume}
-                    onLoadSuccess={() => setIsLoading(false)}
-                    error={<div className="error">Failed to load PDF.</div>}
-                >
-                    <Page
-                        pageNumber={1}
-                        renderTextLayer={false}
-                        scale={1.2}
-                    />
-                </Document>
+            <div className="resume-iframe-container">
+                <iframe
+                    src={resumeUrl}
+                    title="Resume PDF"
+                    className="resume-iframe"
+                />
             </div>
         </div>
     );
