@@ -36,7 +36,6 @@ const Home = () => {
                             Get in Touch
                         </button>
                     </div>
-
                 </div>
                 <img id="code" src={code} alt="Code background" />
             </div>
