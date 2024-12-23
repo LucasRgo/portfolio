@@ -1,5 +1,5 @@
 // ProjectCard.jsx
-import React from 'react';
+import {React , useEffect } from 'react';
 import './projects.css'; // Adjust the path as necessary
 import AOS from 'aos';
 import 'aos/dist/aos.css';
