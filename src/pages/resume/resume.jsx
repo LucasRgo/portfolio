@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
 import resume from '/resume.pdf';
 import './resume.css';
+import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
 
-// Configure PDF.js worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+// Configure worker
+pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 const Resume = () => {
     const [isLoading, setIsLoading] = useState(true);
