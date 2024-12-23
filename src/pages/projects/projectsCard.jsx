@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
     }, [wasPlayButtonClicked])
 
     const handleClick = () => {
-        SetWasPlayButtonClicked = true;
+        SetWasPlayButtonClicked(true);
         console.log("You're click worked!!");
     }
 
