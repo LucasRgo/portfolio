@@ -6,6 +6,8 @@ import commerce from '/commerce.webp';
 import movie from '/movie.webp';
 import flow from '/flow.webp';
 import neidi from '/neidi.webp';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Projects = () => {
     const firstProjectRef = useRef(null);
@@ -13,6 +15,10 @@ const Projects = () => {
     const handleScrollToFirstProject = () => {
         firstProjectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     const projects = [
         {
@@ -67,7 +73,7 @@ const Projects = () => {
     return (
         <>
             <div className="projects-container">
-                <div className="projects-content">
+                <div className="projects-content" data-aos="flip-up" data-aos-delay="400" >
                     <h1 id="projects-heading">PROJECTS</h1>
                     <p id="projects-p">
                         Here are some of my most prestigious works
