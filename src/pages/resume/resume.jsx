@@ -3,7 +3,9 @@ import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import resume from '/resume.pdf';
 import './resume.css';
-import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
+import 'pdfjs-dist/build/pdf.worker.entry';
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 // Configure worker
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
