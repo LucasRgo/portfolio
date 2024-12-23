@@ -65,7 +65,6 @@ const Projects = () => {
         }
     ];
 
-
     const handlePlayClick = () => {
         console.log("button clicked!")
     };
