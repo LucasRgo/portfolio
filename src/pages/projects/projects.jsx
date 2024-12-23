@@ -65,18 +65,11 @@ const Projects = () => {
         }
     ];
 
-    const handlePlayClick = () => {
-        console.log("button clicked!");
-    };
-
     const ProjectCard = ({ project, handlePlayClick }) => {
         return (
             <div className="project-card">
                 <div className="project-image-container">
                     <img src={project.image} alt={project.title} className="project-image" />
-                    <button className="play-button" onClick={handlePlayClick}>
-                        {project.youtubeUrl.includes('youtu') ? '▶' : '🌐'}
-                    </button>
                 </div>
                 <div className="project-content">
                     <div className="project-header">
@@ -112,7 +105,7 @@ const Projects = () => {
                 <div className="projects-container">
                     {projects.map((project, index) => (
                         <div key={project.id} ref={index === 0 ? firstProjectRef : null}>
-                            <ProjectCard project={project} handlePlayClick={handlePlayClick} />
+                            <ProjectCard project={project} />
                         </div>
                     ))}
                 </div>
