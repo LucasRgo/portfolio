@@ -89,6 +89,6 @@
     }
 
     .resume-iframe {
-        min-height: 90vh;
+        max-height: 70vh;
     }
 }
