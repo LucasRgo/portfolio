@@ -168,8 +168,8 @@
         object-position: center; /* Centers the image so the sides are cropped evenly */
     }
     .avatar {
-        width: 2rem !important;
-        height: auto !important;
+        width: 20% ;
+        height: aut2o;
+        max-width: 200px; /* Optional: to prevent the image from becoming too large */
     }
-
 }
