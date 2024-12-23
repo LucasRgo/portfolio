@@ -110,7 +110,7 @@ const Projects = () => {
                         Here are some of my most prestigious works
                     </p>
                     <button
-                        onClick={handleScrollToFirstProject}  // Use this function to scroll
+                        onClick={handleScrollToFirstProject}  
                         className="contact-button rounded-3"
                     >
                         Start the Tour
