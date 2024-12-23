@@ -239,7 +239,8 @@
     }
 
     .projects-content {
-        padding: 1rem 1rem;
+        min-width: 95vw;
+        padding: 1rem;
         margin: 0rem;
     }
 
@@ -249,7 +250,8 @@
     }
 
     #projects-p {
-        font-size: 5vw;
+        font-size: 6vw;
+        text-align: center;
     }
 
 
