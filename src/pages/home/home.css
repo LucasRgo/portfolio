@@ -131,27 +131,26 @@
         flex-direction: column;
         justify-content: center;
         min-height: 85vh;
-        padding: 5%;
+        padding: 0rem;
     }
 
     .intro-text {
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        gap: 5%;
         margin-top: 10%;
-        padding: 5% 5%;
         max-width: 100%;
         border-radius: 20px;
+        padding: 0rem;
     }
 
     .intro-text h1 {
-        font-size: 5vw;
+        font-size: 9vw;
         text-align: center;
     }
 
     .intro-text p {
-        font-size: 3vw;
+        font-size: 5vw;
         text-align: center;
     }
 
@@ -171,9 +170,6 @@
     }
 
     .avatar {
-        width: 30%;
-        height: 30%;
-        max-height: 150px; /* Optional: to prevent the image from becoming too large */
-        max-width: 150px; /* Optional: to prevent the image from becoming too large */
+        max-height: 5%; /* Optional: to prevent the image from becoming too large */
     }
 }
