@@ -15,16 +15,6 @@ const Projects = () => {
         firstProjectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const handlePlayClick = () => {
-        if (project.youtubeUrl.includes('youtu')) {
-            // Open the YouTube video in a new tab
-            window.open(project.youtubeUrl, '_blank');
-        } else {
-            // Open the external website in a new tab
-            window.open(project.youtubeUrl, '_blank');
-        }
-    };
-
     const projects = [
         {
             "id": 1,
@@ -75,6 +65,11 @@ const Projects = () => {
         }
     ];
 
+
+    const handlePlayClick = () => {
+        
+    };
+
     const ProjectCard = ({ project }) => {
 
 
@@ -110,7 +105,7 @@ const Projects = () => {
                         Here are some of my most prestigious works
                     </p>
                     <button
-                        onClick={handleScrollToFirstProject}  
+                        onClick={handleScrollToFirstProject}
                         className="contact-button rounded-3"
                     >
                         Start the Tour
