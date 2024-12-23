@@ -11,12 +11,18 @@ const ProjectCard = ({ project }) => {
         AOS.init();
     }, []);
 
+    const handleClick = () => {
+        console.log("You're click worked!!");
+    }
 
     return (
         <div className="project-card" data-aos="fade-up" data-aos-delay="300">
             <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
             </div>
+            <button className="btn btn-large btn-outline-light">
+                    Hello
+            </button>
             <div className="project-content">
                 <div className="project-header">
                     <h3>
