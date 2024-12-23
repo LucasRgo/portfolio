@@ -177,7 +177,7 @@
 }
 
 /* Extra small screens */
-@media (max-width: 480px) {
+@media (max-width: 780px) {
 
     .intro-text h1 {
         font-size: 2rem;
