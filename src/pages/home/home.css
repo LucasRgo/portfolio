@@ -168,7 +168,7 @@
         object-position: center; /* Centers the image so the sides are cropped evenly */
     }
     .avatar {
-        width: 30% !important;
+        width: 30vw !important;
         height: auto !important;
     }
 
