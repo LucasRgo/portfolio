@@ -174,11 +174,7 @@
     text-align: center;
     z-index: 6;
     font-family: 'Poppins', sans-serif;
-}
-
-.project-card {
     position: relative;
-    padding: 20px;
 }
 
 .project-image {
