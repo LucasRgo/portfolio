@@ -231,6 +231,11 @@
 
 }
 
+
+#play {
+    z-index: 10;
+}
+
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;

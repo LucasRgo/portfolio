@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
             <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
             </div>
-            <button className="btn btn-large btn-outline-light">
+            <button id="play" className="btn btn-large btn-outline-light" onClick={handleClick}>
                     Hello
             </button>
             <div className="project-content">
