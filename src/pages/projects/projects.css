@@ -237,7 +237,12 @@
         overflow: visible;
         min-height: 70vh;
     }
-    
+
+    .projects-content {
+        padding: 1rem 1rem;
+        margin: 0rem;
+    }
+
 
     #projects-heading {
         font-size: 15vw;
