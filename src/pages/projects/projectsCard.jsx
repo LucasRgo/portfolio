@@ -6,15 +6,22 @@ import 'aos/dist/aos.css';
 
 
 const ProjectCard = ({ project }) => {
-    const wasPlayButtonClicked, SetWasPlayButtonClicked 
+    const [wasPlayButtonClicked, SetWasPlayButtonClicked] = useState(false);
+
+
+    useEffect(() => {
+
+    }, [wasPlayButtonClicked])
+
+    const handleClick = () => {
+        SetWasPlayButtonClicked = true;
+        console.log("You're click worked!!");
+    }
+
 
     useEffect(() => {
         AOS.init();
     }, []);
-
-    const handleClick = () => {
-        console.log("You're click worked!!");
-    }
 
     return (
         <div className="project-card" data-aos="fade-up" data-aos-delay="300">
