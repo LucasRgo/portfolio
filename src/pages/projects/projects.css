@@ -235,7 +235,6 @@
 }
 
 
-/* Button styles */
 #play {
     position: absolute;
     top: 40%;
@@ -262,12 +261,10 @@
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Target the child span when the parent button is hovered */
 #play:hover .play-icon {
     color: white;
 }
 
-/* Default span style */
 .play-icon {
     font-size: 5rem;
     font-weight: bold;
