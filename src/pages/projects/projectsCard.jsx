@@ -21,10 +21,24 @@ const ProjectCard = ({ project }) => {
     return (
         <div className="project-card" data-aos="fade-up" data-aos-delay="300">
             <div className="project-image-container">
-                <img src={project.image} alt={project.title} className="project-image" />
-                <button id="play" onClick={handleClick}>
-                    <span className="play-icon">▶</span>
-                </button>
+                {!wasPlayButtonClicked ? (
+                    <>
+                        <img src={project.image} alt={project.title} className="project-image" />
+                        <button id="play" onClick={handleClick}>
+                            <span className="play-icon">▶</span>
+                        </button>
+                    </>
+                ) : (
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${project.youtubeId}`}
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                )}
             </div>
             <div className="project-content">
                 <div className="project-header">
