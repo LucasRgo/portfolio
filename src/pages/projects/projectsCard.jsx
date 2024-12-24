@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
         if (project.id === 3) {
             window.open(project.youtubeUrl, '_blank');
         } else {
-            setWasPlayButtonClicked(true);
+            SetWasPlayButtonClicked(true);
             console.log("You're click worked!!");
         }
     };
