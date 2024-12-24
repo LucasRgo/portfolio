@@ -8,11 +8,6 @@ import 'aos/dist/aos.css';
 const ProjectCard = ({ project }) => {
     const [wasPlayButtonClicked, SetWasPlayButtonClicked] = useState(false);
 
-
-    useEffect(() => {
-
-    }, [wasPlayButtonClicked])
-
     const handleClick = () => {
         SetWasPlayButtonClicked(true);
         console.log("You're click worked!!");
