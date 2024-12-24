@@ -31,7 +31,7 @@ const Projects = () => {
                 It includes a custom recommendation script that suggests movies based on your preferences.
                 Additionally, users can search for movies and explore individual movie pages, which showcase similar movie suggestions.`,
             image: movie,
-            youtubeUrl: "https://youtu.be/xT9839JWf34"
+            youtubeUrl: "xT9839JWf34"
         },
         {
             id: 2,
@@ -43,7 +43,7 @@ const Projects = () => {
                 The platform also features an intelligent system that adjusts word intervals based on punctuation.
                 Additionally, it remembers the last page the user was reading, so they can easily pick up where they left off.`,
             image: flow,
-            youtubeUrl: "https://youtu.be/PSks1SQWFGM"
+            youtubeUrl: "PSks1SQWFGM"
         },
         {
             id: 3,
@@ -66,7 +66,7 @@ const Projects = () => {
                     It showcases my ability to seamlessly integrate the backend and frontend, handle user authentication, and manage databases.
                     `,
             image: commerce,
-            youtubeUrl: "https://youtu.be/4zg9OpkBTSA"
+            youtubeUrl: "4zg9OpkBTSA"
         }
     ];
 
