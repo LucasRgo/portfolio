@@ -9,9 +9,14 @@ const ProjectCard = ({ project }) => {
     const [wasPlayButtonClicked, SetWasPlayButtonClicked] = useState(false);
 
     const handleClick = () => {
-        SetWasPlayButtonClicked(true);
-        console.log("You're click worked!!");
-    }
+        if (project.id === 3) {
+            // Open the website in a new tab for Neidi Cred
+            window.open(project.youtubeUrl, '_blank');
+        } else {
+            setWasPlayButtonClicked(true);
+            console.log("You're click worked!!");
+        }
+    };
 
 
     useEffect(() => {
