@@ -178,11 +178,6 @@
     position: relative;
 }
 
-.project-image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
 
 .project-video {
     position: absolute;
