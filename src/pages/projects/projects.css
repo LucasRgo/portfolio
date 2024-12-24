@@ -178,6 +178,15 @@
     position: relative;
 }
 
+.project-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 35px 35px 0 0;
+    background-color: #000; /* Optional: Placeholder background for iframe */
+}
+
 
 .project-image {
     position: relative;
