@@ -10,7 +10,6 @@ const ProjectCard = ({ project }) => {
 
     const handleClick = () => {
         if (project.id === 3) {
-            // Open the website in a new tab for Neidi Cred
             window.open(project.youtubeUrl, '_blank');
         } else {
             setWasPlayButtonClicked(true);
