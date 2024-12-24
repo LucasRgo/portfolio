@@ -31,7 +31,7 @@ const Projects = () => {
                 It includes a custom recommendation script that suggests movies based on your preferences.
                 Additionally, users can search for movies and explore individual movie pages, which showcase similar movie suggestions.`,
             image: movie,
-            youtubeUrl: "YWIYZWkl66I"
+            youtubeUrl: "YWIYZWkl66I?start=7"
         },
         {
             id: 2,
