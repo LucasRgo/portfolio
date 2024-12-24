@@ -9,6 +9,7 @@ import Projects from './pages/projects/projects';
 import Resume from './pages/resume/resume';
 import './App.css';
 
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -16,7 +17,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/portfolio/"
+          path="/"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -29,7 +30,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/portfolio/projects"
+          path="/projects"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -42,7 +43,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/portfolio/resume"
+          path="/resume"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -54,12 +55,13 @@ function AnimatedRoutes() {
             </motion.div>
           }
         />
-        {/* Catch-all route to redirect to home */}
+        {/* Catch-all route */}
         <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>
   );
 }
+
 
 function App() {
   return (
