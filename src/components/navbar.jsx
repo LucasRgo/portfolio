@@ -10,17 +10,17 @@ function CustomNavbar() {
       <div className="navbar-container">
         <div className="navbar-links">
           <Link
-            to="/portfolio/"
+            to="/"
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
             Home
           </Link>
           <Link
-            to="/portfolio/projects"
+            to="/projects"
             className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`}>
             Projects
           </Link>
           <Link
-            to="/portfolio/resume"
+            to="/resume"
             className={`nav-link ${location.pathname === '/resume' ? 'active' : ''}`}>
             Resume
           </Link>
