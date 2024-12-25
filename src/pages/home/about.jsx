@@ -12,7 +12,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="about-container">
+    <section className="about-container" id="about">
       <div className="about-content" data-aos="fade-up" data-aos-delay="500">
         <div className="about-image-wrapper">
           <div className="image-overlay-text">
