@@ -67,7 +67,7 @@ function Footer() {
                                 className="footer-link">Projects</a>
                             </li>
                             <li className="footer-list-item">
-                                <a href="#" className="footer-link">Homepage</a>
+                                <a href="/" className="footer-link">Homepage</a>
                             </li>
                         </ul>
                     </div>
