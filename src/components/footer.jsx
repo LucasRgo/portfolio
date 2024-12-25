@@ -55,7 +55,7 @@ function Footer() {
                         <h4 className="footer-title">Reference</h4>
                         <ul className="footer-list list-unstyled">
                             <li className="footer-list-item">
-                                <a href="#-" className="footer-link">About me</a>
+                                <a href="/#about" className="footer-link">About me</a>
                             </li>
                             <li className="footer-list-item">
                                 <a href="#" className="footer-link">Services</a>
