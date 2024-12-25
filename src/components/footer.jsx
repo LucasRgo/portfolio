@@ -17,8 +17,7 @@ function Footer() {
                             <h4 className="footer-title">Social media</h4>
                             <ul className="footer-list list-unstyled">
                                 <li className="footer-list-item">
-
-                                    <a href="#-" className="footer-link"><i className="bi bi-linkedin footer-icon"></i>LinkedIn</a>
+                                    <a href="https://www.linkedin.com/in/lucasrgoveiadev/" className="footer-link"><i className="bi bi-linkedin footer-icon"></i>LinkedIn</a>
                                 </li>
                                 <li className="footer-list-item">
 
