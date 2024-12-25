@@ -10,7 +10,7 @@ function Footer() {
                         <div className="col-md-6" id="footer-brand">
                             <h1 className="red-orange"><i className="bi bi-code-slash red-orange">!</i></h1>
                             <h5 className="footer-copyright">
-                                &copy; 2024 Coded by <a href="index.html" className="lucas">Lucas R Goveia</a>, Inc. All rights reserved.
+                                &copy; 2024 Coded by <a href="https://lucasrgoveia.tech/" className="lucas">Lucas R Goveia</a>, Inc. All rights reserved.
                             </h5>
                         </div>
                         <div className="col-md-3" id="footer-social-media">
