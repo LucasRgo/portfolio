@@ -28,7 +28,7 @@ function Footer() {
                             </li>
                             <li className="footer-list-item">
 
-                                <a href="#" className="footer-link"><i className="bi bi-instagram footer-icon"></i>Instagram</a>
+                                <a href="https://www.instagram.com/lucass_cj/" className="footer-link"><i className="bi bi-instagram footer-icon"></i>Instagram</a>
                             </li>
                         </ul>
                     </div>
