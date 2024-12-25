@@ -24,7 +24,7 @@ function Footer() {
                             </li>
                             <li className="footer-list-item">
 
-                                <a href="#" className="footer-link"><i className="bi bi-envelope footer-icon"></i>E-mail</a>
+                                <a href="mailto:lucas.lrg.0005@gmail.com" className="footer-link"><i className="bi bi-envelope footer-icon"></i>E-mail</a>
                             </li>
                             <li className="footer-list-item">
 
