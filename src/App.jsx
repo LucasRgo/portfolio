@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import Home from './pages/home/home';
 import Projects from './pages/projects/projects';
 import Resume from './pages/resume/resume';
+import ScrollToTop from './scrollTop';
 import './App.css';
 
 
@@ -66,6 +67,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <MyNavbar />
       <AnimatedRoutes />
       <Footer />
