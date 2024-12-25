@@ -57,11 +57,14 @@ function Footer() {
                             <li className="footer-list-item">
                                 <a href="/#about" className="footer-link">About me</a>
                             </li>
+
                             <li className="footer-list-item">
-                                <a href="#" className="footer-link">Services</a>
+                                <a href="mailto:lucas.lrg.0005@gmail.com"
+                                className="footer-link">Contact</a>
                             </li>
                             <li className="footer-list-item">
-                                <a href="#" className="footer-link">Contact</a>
+                                <a href="mailto:lucas.lrg.0005@gmail.com"
+                                className="footer-link">Contact</a>
                             </li>
                             <li className="footer-list-item">
                                 <a href="#" className="footer-link">Homepage</a>
