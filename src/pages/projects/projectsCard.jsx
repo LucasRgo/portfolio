@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
     }, []);
 
     return (
-        <div className="project-card" data-aos="fade-up" data-aos-delay="300">
+        <div className="project-card" data-aos="fade-up" data-aos-delay="300" id="project">
             <div className="project-image-container">
                 {!wasPlayButtonClicked ? (
                     <>
