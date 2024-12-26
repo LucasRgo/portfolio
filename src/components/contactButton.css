@@ -44,7 +44,6 @@
         opacity: 0;
         transform: translateX(30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -58,12 +57,43 @@
     font-family: monospace;
 }
 
-.contact-card p {
-    color: white;
-    opacity: 0.8;
-    margin-bottom: 20px;
+.contact-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
     font-family: monospace;
-    font-size: 25px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.contact-item:active {
+    background: rgba(130, 226, 229, 0.3);
+}
+
+.copy-message {
+    color: #82e2e5;
+    font-size: 16px;
+    font-family: monospace;
+    margin-top: 10px;
+    text-align: center;
+    animation: fadeOut 2s ease;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .close-button {
