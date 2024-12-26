@@ -21,7 +21,7 @@ const ContactButton = () => {
     const handleCopy = (text, id) => {
         navigator.clipboard.writeText(text);
         setCopiedItem(id);
-        setTimeout(() => setCopiedItem(null), 2000); // Reset after 2 seconds
+        setTimeout(() => setCopiedItem(null), 3000);
     };
 
     useEffect(() => {
