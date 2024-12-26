@@ -14,7 +14,6 @@ const ContactButton = () => {
         }
     };
 
-
     useEffect(() => {
         if (isCardOpen) {
         document.addEventListener('mousedown', handleClickOutside);
@@ -23,7 +22,6 @@ const ContactButton = () => {
         document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isCardOpen]);
-
 
     return (
         <>
