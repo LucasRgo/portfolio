@@ -2,7 +2,7 @@ import './contactButton.css';
 
 const ContactButton = () => {
     return (
-        <button className="contact-button">
+        <button className="floating-contact-button">
             Contact me here
         </button>
     );
