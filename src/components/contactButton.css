@@ -47,6 +47,8 @@
     text-align: center;
 }
 
+
+
 .contact-table {
     display: flex;
     flex-direction: column;
@@ -56,11 +58,12 @@
 }
 
 .contact-row {
+    display: flex;
+    align-items: center;
     padding: 15px;
     font-family: monospace;
     color: white;
     font-size: 18px;
-    text-align: center;
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -76,12 +79,48 @@
     transform: scale(1.02);
 }
 
+.contact-label {
+    width: 30%;
+    color: #82e2e5;
+    text-align: left;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-value {
+    width: 70%;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
 .contact-row.copied {
     background: rgba(130, 226, 229, 0.3);
     color: #82e2e5;
     font-weight: bold;
     transform: scale(1.05);
 }
+
+/* Icons */
+.contact-label i {
+    font-size: 20px;
+}
+
+/* Additional Styling for Online Profiles */
+.contact-row a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.contact-row a:hover {
+    color: #82e2e5;
+}
+
+
+
+
 
 .close-button {
     background: transparent;

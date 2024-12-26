@@ -40,21 +40,61 @@ const ContactButton = () => {
                     Contact me here
                 </button>
             )}
+
             {isCardOpen && (
                 <div className="contact-card" ref={cardRef}>
                     <h3>Contact</h3>
                     <div className="contact-table">
+                        {/* Email */}
                         <div
                             className={`contact-row ${copiedItem === 'email' ? 'copied' : ''}`}
                             onClick={() => handleCopy('example@example.com', 'email')}
                         >
-                            {copiedItem === 'email' ? 'Copied!' : 'example@example.com'}
+                            <span className="contact-label">
+                                <i className="fas fa-envelope"></i> Email
+                            </span>
+                            <span className="contact-value">
+                                {copiedItem === 'email' ? 'Copied!' : 'example@example.com'}
+                            </span>
                         </div>
+
+                        {/* Phone */}
                         <div
                             className={`contact-row ${copiedItem === 'phone' ? 'copied' : ''}`}
                             onClick={() => handleCopy('(123) 456-7890', 'phone')}
                         >
-                            {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
+                            <span className="contact-label">
+                                <i className="fas fa-phone"></i> Phone
+                            </span>
+                            <span className="contact-value">
+                                {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
+                            </span>
+                        </div>
+
+                        {/* GitHub */}
+                        <div
+                            className="contact-row"
+                            onClick={() => window.open('https://github.com/your-profile', '_blank')}
+                        >
+                            <span className="contact-label">
+                                <i className="fab fa-github"></i> GitHub
+                            </span>
+                            <span className="contact-value">
+                                https://github.com/your-profile
+                            </span>
+                        </div>
+
+                        {/* LinkedIn */}
+                        <div
+                            className="contact-row"
+                            onClick={() => window.open('https://linkedin.com/in/your-profile', '_blank')}
+                        >
+                            <span className="contact-label">
+                                <i className="fab fa-linkedin"></i> LinkedIn
+                            </span>
+                            <span className="contact-value">
+                                https://linkedin.com/in/your-profile
+                            </span>
                         </div>
                     </div>
                     <button className="close-button" onClick={handleToggleCard}>
@@ -62,6 +102,8 @@ const ContactButton = () => {
                     </button>
                 </div>
             )}
+
+
         </>
     );
 };
