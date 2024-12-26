@@ -56,6 +56,7 @@ const ContactButton = () => {
                             <span className="contact-value">
                                 {copiedItem === 'email' ? 'Copied!' : 'example@example.com'}
                             </span>
+                            <i className="fas fa-copy action-icon"></i>
                         </div>
 
                         {/* Phone */}
@@ -69,7 +70,9 @@ const ContactButton = () => {
                             <span className="contact-value">
                                 {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
                             </span>
+                            <i className="fas fa-copy action-icon"></i>
                         </div>
+
                         {/* LinkedIn */}
                         <div
                             className="contact-row"
@@ -78,21 +81,8 @@ const ContactButton = () => {
                             <span className="contact-label">
                                 <i className="fab fa-linkedin"></i> LinkedIn
                             </span>
-                            <span className="contact-value">
-                                LucasRgoDev
-                            </span>
-                        </div>
-                        {/* GitHub */}
-                        <div
-                            className="contact-row"
-                            onClick={() => window.open('https://github.com/your-profile', '_blank')}
-                        >
-                            <span className="contact-label">
-                                <i className="fab fa-github"></i> GitHub
-                            </span>
-                            <span className="contact-value">
-                                LucasRgo
-                            </span>
+                            <span className="contact-value">LucasRgoDev</span>
+                            <i className="fas fa-external-link-alt action-icon"></i>
                         </div>
                     </div>
                     <button className="close-button" onClick={handleToggleCard}>
@@ -100,8 +90,6 @@ const ContactButton = () => {
                     </button>
                 </div>
             )}
-
-
         </>
     );
 };

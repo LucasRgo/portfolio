@@ -70,6 +70,22 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.action-icon {
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.action-icon:hover {
+    color: white;
+}
+
+.contact-value {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
 .contact-row:last-child {
     border-bottom: none;
 }
