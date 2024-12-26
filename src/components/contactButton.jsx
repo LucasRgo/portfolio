@@ -14,6 +14,17 @@ const ContactButton = () => {
         }
     };
 
+
+    useEffect(() => {
+        if (isCardOpen) {
+        document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isCardOpen]);
+
+
     return (
         <>
             <button className="floating-contact-button" onClick={handleToggleCard}>
