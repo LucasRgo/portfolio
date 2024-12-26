@@ -17,7 +17,6 @@ const ProjectCard = ({ project }) => {
         }
     };
 
-
     useEffect(() => {
         AOS.init();
     }, []);
