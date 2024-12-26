@@ -21,7 +21,7 @@ const ContactButton = () => {
     const handleCopy = (text, id) => {
         navigator.clipboard.writeText(text);
         setCopiedItem(id);
-        setTimeout(() => setCopiedItem(null), 3000);
+        setTimeout(() => setCopiedItem(null), 8000);
     };
 
     useEffect(() => {
@@ -81,7 +81,7 @@ const ContactButton = () => {
                             <span className="contact-label">
                                 <i className="fab fa-linkedin"></i> LinkedIn
                             </span>
-                            <span className="contact-value">LucasRgoDev</span>
+                            <span className="contact-value">lucasrgoveiadev</span>
                             <i className="fas fa-external-link-alt action-icon"></i>
                         </div>
                     </div>
