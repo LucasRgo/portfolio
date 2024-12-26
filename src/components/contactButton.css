@@ -153,3 +153,127 @@
         transform: translateX(0);
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .floating-contact-button {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .floating-contact-button:hover {
+        transform: translateX(50%) scale(1.02);
+    }
+
+    .contact-card {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        max-width: 350px;
+        padding: 20px 15px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .contact-card h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .contact-table {
+        margin: 5px 0;
+    }
+
+    .contact-row {
+        padding: 12px;
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .contact-label {
+        width: 100%;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .contact-value {
+        width: 100%;
+        padding-left: 28px;
+        font-size: 14px;
+        word-break: break-all;
+    }
+
+    .action-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .close-button {
+        margin-top: 12px;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(50%) translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(50%) translateY(0);
+        }
+    }
+
+    /* Prevent body scroll when card is open */
+    body.card-open {
+        overflow: hidden;
+    }
+
+    /* Adjust copied state for mobile */
+    .contact-row.copied {
+        transform: scale(1.01);
+    }
+
+    .contact-row:hover {
+        transform: scale(1.01);
+    }
+}
+
+/* Additional breakpoint for very small screens */
+@media screen and (max-width: 380px) {
+    .contact-card {
+        padding: 15px 12px;
+    }
+
+    .contact-card h3 {
+        font-size: 20px;
+    }
+
+    .contact-row {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .contact-label {
+        font-size: 13px;
+    }
+
+    .contact-value {
+        font-size: 13px;
+    }
+}

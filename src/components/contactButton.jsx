@@ -33,6 +33,19 @@ const ContactButton = () => {
         };
     }, [isCardOpen]);
 
+
+    useEffect(() => {
+        if (isCardOpen) {
+          document.body.classList.add('card-open');
+        } else {
+          document.body.classList.remove('card-open');
+        }
+
+        return () => {
+          document.body.classList.remove('card-open');
+        };
+    }, [isCardOpen]);
+
     return (
         <>
             {!isCardOpen && (
