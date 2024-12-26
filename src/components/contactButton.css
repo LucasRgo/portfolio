@@ -1,0 +1,14 @@
+.contact-button {
+    position: fixed; /* Makes the button fixed at a specific position on the screen */
+    bottom: 20px;    /* Adjust the distance from the bottom of the screen */
+    right: 20px;     /* Adjust the distance from the right side of the screen */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 16px; /* Adjust the font size */
+    z-index: 1000; /* Ensures the button stays on top of other elements */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds a hover effect */
+}
+
+.contact-button:hover {
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Intensifies the shadow */
+}

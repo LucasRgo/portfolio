@@ -1,7 +1,9 @@
+import './contactButton.css';
+
 const ContactButton = () => {
     return (
         <button className="contact-button">
-            Contact me here >
+            Contact me here
         </button>
     );
 };
