@@ -1,8 +1,9 @@
-import './contactButton.css';
 import React, { useState, useRef, useEffect } from 'react';
+import './contactButton.css';
 
 const ContactButton = () => {
-    const [isCardOpen , setIsCardOpen]= useState(false);
+    const [isCardOpen, setIsCardOpen] = useState(false);
+    const cardRef = useRef(null);
 
     const handleToggleCard = () => {
         setIsCardOpen(!isCardOpen);
@@ -10,16 +11,16 @@ const ContactButton = () => {
 
     const handleClickOutside = (event) => {
         if (cardRef.current && !cardRef.current.contains(event.target)) {
-          setIsCardOpen(false);
+            setIsCardOpen(false);
         }
     };
 
     useEffect(() => {
         if (isCardOpen) {
-        document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('mousedown', handleClickOutside);
         }
         return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isCardOpen]);
 
@@ -29,10 +30,10 @@ const ContactButton = () => {
                 {isCardOpen ? 'Close' : 'Contact me here'}
             </button>
             {isCardOpen && (
-                <div className="contact-card">
-                <h3>Contact Information</h3>
-                <p>Email: example@example.com</p>
-                <p>Phone: (123) 456-7890</p>
+                <div className="contact-card" ref={cardRef}>
+                    <h3>Contact Information</h3>
+                    <p>Email: example@example.com</p>
+                    <p>Phone: (123) 456-7890</p>
                 </div>
             )}
         </>

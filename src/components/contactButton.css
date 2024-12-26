@@ -18,13 +18,37 @@
     background-clip: padding-box;
 }
 
+
 .floating-contact-button:hover {
-    transform: scale(1.1); /* Slightly enlarges the button on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Intensifies the shadow */
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
     color: white;
     background: linear-gradient(45deg, #c0c0c0d2, #5296b1, #285e8a);
-    border: 2px solid transparent;
     border-image: linear-gradient(45deg, #c0c0c0d2, #5296b1, #285e8a);
-    border-image-slice: 1;
-    transition: all 0.6s ease;
+}
+
+.contact-card {
+    position: fixed; /* Ensures the card is positioned relative to the viewport */
+    top: 150px;      /* Aligns vertically with the button */
+    right: 80px;     /* Positions the card slightly to the left of the button */
+    width: 250px;
+    padding: 15px;
+    background-color: #ffffff; /* Background color of the card */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    z-index: 999; /* Ensures the card stays on top */
+    border: 1px solid #ddd;
+    z-index: 1001;
+}
+
+.contact-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-card p {
+    margin: 0 0 5px;
+    font-size: 14px;
+    color: #666;
 }
