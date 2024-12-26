@@ -1,9 +1,9 @@
 .floating-contact-button {
-    position: fixed; /* Makes the button fixed at a specific position on the screen */
-    top: 150px;    /* Adjust the distance from the bottom of the screen */
-    right: 20px;     /* Adjust the distance from the right side of the screen */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    z-index: 1000; /* Ensures the button stays on top of other elements */
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
