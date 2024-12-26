@@ -40,6 +40,7 @@ const ContactButton = () => {
                     Contact me here
                 </button>
             )}
+
             {isCardOpen && (
                 <div className="contact-card" ref={cardRef}>
                     <h3>Contact</h3>
@@ -48,13 +49,19 @@ const ContactButton = () => {
                             className={`contact-row ${copiedItem === 'email' ? 'copied' : ''}`}
                             onClick={() => handleCopy('example@example.com', 'email')}
                         >
-                            {copiedItem === 'email' ? 'Copied!' : 'example@example.com'}
+                            <span className="contact-label">Email</span>
+                            <span className="contact-value">
+                                {copiedItem === 'email' ? 'Copied!' : 'example@example.com'}
+                            </span>
                         </div>
                         <div
                             className={`contact-row ${copiedItem === 'phone' ? 'copied' : ''}`}
                             onClick={() => handleCopy('(123) 456-7890', 'phone')}
                         >
-                            {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
+                            <span className="contact-label">Phone</span>
+                            <span className="contact-value">
+                                {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
+                            </span>
                         </div>
                     </div>
                     <button className="close-button" onClick={handleToggleCard}>
@@ -62,6 +69,8 @@ const ContactButton = () => {
                     </button>
                 </div>
             )}
+
+
         </>
     );
 };
