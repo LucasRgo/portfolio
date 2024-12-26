@@ -48,13 +48,13 @@ const ContactButton = () => {
                         {/* Email */}
                         <div
                             className={`contact-row ${copiedItem === 'email' ? 'copied' : ''}`}
-                            onClick={() => handleCopy('example@example.com', 'email')}
+                            onClick={() => handleCopy('lucas.lrg0005@gmail.com', 'email')}
                         >
                             <span className="contact-label">
                                 <i className="fas fa-envelope"></i> Email
                             </span>
                             <span className="contact-value">
-                                {copiedItem === 'email' ? 'Copied!' : 'example@example.com'}
+                                {copiedItem === 'email' ? 'Copied!' : 'lucas.lrg0005@gmail.com'}
                             </span>
                             <i className="fas fa-copy action-icon"></i>
                         </div>
@@ -62,13 +62,13 @@ const ContactButton = () => {
                         {/* Phone */}
                         <div
                             className={`contact-row ${copiedItem === 'phone' ? 'copied' : ''}`}
-                            onClick={() => handleCopy('(123) 456-7890', 'phone')}
+                            onClick={() => handleCopy('+55 (63) 99206-0528', 'phone')}
                         >
                             <span className="contact-label">
                                 <i className="fas fa-phone"></i> Phone
                             </span>
                             <span className="contact-value">
-                                {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
+                                {copiedItem === 'phone' ? 'Copied!' : '+55 (63) 99206-0528'}
                             </span>
                             <i className="fas fa-copy action-icon"></i>
                         </div>
@@ -76,7 +76,7 @@ const ContactButton = () => {
                         {/* LinkedIn */}
                         <div
                             className="contact-row"
-                            onClick={() => window.open('https://linkedin.com/in/your-profile', '_blank')}
+                            onClick={() => window.open('https://www.linkedin.com/in/lucasrgoveiadev/', '_blank')}
                         >
                             <span className="contact-label">
                                 <i className="fab fa-linkedin"></i> LinkedIn
