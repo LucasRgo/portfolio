@@ -9,10 +9,10 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: #a9fcff;
+    color: #ffffff;
     background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
     border: 2px solid transparent;
-    border-image: linear-gradient(45deg, #ffffff, #a9fcff, #52ceff);
+    border-image: linear-gradient(45deg, rgba(192, 192, 192, 0.8), rgba(82, 150, 177, 0.8), rgba(40, 94, 138, 0.8));
     border-image-slice: 1;
     transition: all 0.6s ease;
     backdrop-filter: blur(10px); /* Applies the blur effect */
@@ -21,10 +21,11 @@
 }
 
 .floating-contact-button:hover {
+    scale: 1.05;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
     color: white;
     background: linear-gradient(45deg, rgba(192, 192, 192, 0.8), rgba(82, 150, 177, 0.8), rgba(40, 94, 138, 0.8));
-    border-image: linear-gradient(45deg, rgba(192, 192, 192, 0.8), rgba(82, 150, 177, 0.8), rgba(40, 94, 138, 0.8));
+    border-image: 0px;
     backdrop-filter: blur(15px); /* Slightly increase blur on hover */
     -webkit-backdrop-filter: blur(15px); /* For Safari support */
 }
