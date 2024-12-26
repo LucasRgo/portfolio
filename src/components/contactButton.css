@@ -172,10 +172,6 @@
         text-align: center;
     }
 
-    .floating-contact-button:hover {
-        transform: translateX(50%) scale(1.02);
-    }
-
     .contact-card {
         top: auto;
         bottom: 20px;
@@ -200,34 +196,41 @@
     .contact-row {
         padding: 12px;
         font-size: 14px;
-        flex-direction: row; /* Change back to row */
+        flex-direction: row;
+        /* Change back to row */
         align-items: center;
         position: relative;
-        gap: 0; /* Remove gap */
-      }
+        gap: 0;
+        /* Remove gap */
+    }
 
-      .contact-label {
-        width: 35%; /* Adjust width */
+    .contact-label {
+        width: 35%;
+        /* Adjust width */
         font-size: 14px;
         gap: 8px;
-      }
+    }
 
-      .contact-value {
-        width: 50%; /* Adjust width to make room for icon */
+    .contact-value {
+        width: 50%;
+        /* Adjust width to make room for icon */
         padding-left: 0;
         font-size: 14px;
-        word-break: normal; /* Change from break-all */
+        word-break: normal;
+        /* Change from break-all */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      }
+    }
 
-      .action-icon {
-        position: static; /* Remove absolute positioning */
+    .action-icon {
+        position: static;
+        /* Remove absolute positioning */
         transform: none;
-        margin-left: auto; /* Push to the right */
+        margin-left: auto;
+        /* Push to the right */
         padding: 8px;
-      }
+    }
 
     .close-button {
         margin-top: 12px;
