@@ -157,6 +157,10 @@
 
 @media screen and (max-width: 768px) {
     .floating-contact-button {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .floating-contact-button {
         top: auto;
         bottom: 20px;
         right: 50%;
