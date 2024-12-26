@@ -73,7 +73,7 @@ function App() {
       <MyNavbar />
       <AnimatedRoutes />
       <Footer />
-    </Router>
+d    </Router>
   );
 }
 
