@@ -1,12 +1,18 @@
 import './contactButton.css';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const ContactButton = () => {
     const [isCardOpen , setIsCardOpen]= useState(false);
 
     const handleToggleCard = () => {
         setIsCardOpen(!isCardOpen);
-      };
+    };
+
+    const handleClickOutside = (event) => {
+        if (cardRef.current && !cardRef.current.contains(event.target)) {
+          setIsCardOpen(false);
+        }
+    };
 
     return (
         <>
