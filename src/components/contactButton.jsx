@@ -33,8 +33,7 @@ const ContactButton = () => {
             )}
             {isCardOpen && (
                 <div className="contact-card" ref={cardRef}>
-
-                    <h3>Contact Information</h3>
+                    <h3>Contact Options</h3>
                     <p>Email: example@example.com</p>
                     <p>Phone: (123) 456-7890</p>
                     <button className="close-button" onClick={handleToggleCard}>

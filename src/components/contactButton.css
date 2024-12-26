@@ -27,7 +27,7 @@
     position: fixed;
     top: 150px;
     right: 20px;
-    width: 300px;
+    width: 500px;
     padding: 20px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
@@ -53,7 +53,7 @@
 
 .contact-card h3 {
     color: #82e2e5;
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 15px;
     font-family: monospace;
 }
@@ -61,8 +61,9 @@
 .contact-card p {
     color: white;
     opacity: 0.8;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: monospace;
+    font-size: 25px;
 }
 
 .close-button {
