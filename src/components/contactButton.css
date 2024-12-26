@@ -52,3 +52,18 @@
     font-size: 14px;
     color: #666;
 }
+
+.close-button {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    
+}
+
+.close-button:hover {
+    color: #333;
+}

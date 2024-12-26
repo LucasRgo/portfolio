@@ -26,18 +26,22 @@ const ContactButton = () => {
 
     return (
         <>
-            <button className="floating-contact-button" onClick={handleToggleCard}>
-                {isCardOpen ? 'Close' : 'Contact me here'}
-            </button>
+            {!isCardOpen && (
+                <button className="floating-contact-button" onClick={handleToggleCard}>
+                    Contact me here
+                </button>
+            )}
             {isCardOpen && (
                 <div className="contact-card" ref={cardRef}>
+
                     <h3>Contact Information</h3>
                     <p>Email: example@example.com</p>
                     <p>Phone: (123) 456-7890</p>
+                    <button className="close-button" onClick={handleToggleCard}>
+                        Close
+                    </button>
                 </div>
-            )
-            
-            }
+            )}
         </>
     );
 };
