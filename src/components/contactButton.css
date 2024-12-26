@@ -29,7 +29,7 @@
     right: 10px;
     width: 500px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 12px;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -37,6 +37,67 @@
     box-shadow: 0 8px 32px rgba(52, 191, 255, 0.2);
     animation: slideIn 0.3s ease;
     z-index: 1001;
+}
+
+.contact-card h3 {
+    color: #82e2e5;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.contact-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-row {
+    padding: 15px;
+    font-family: monospace;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-row:last-child {
+    border-bottom: none;
+}
+
+.contact-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.contact-row.copied {
+    background: rgba(130, 226, 229, 0.3);
+    color: #82e2e5;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    color: #82e2e5;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: monospace;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+}
+
+.close-button:hover {
+    color: white;
 }
 
 @keyframes slideIn {
@@ -48,65 +109,4 @@
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-.contact-card h3 {
-    color: #82e2e5;
-    font-size: 30px;
-    margin-bottom: 15px;
-    font-family: monospace;
-}
-
-.contact-item {
-    padding: 15px;
-    margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    font-family: monospace;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.contact-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-}
-
-.contact-item:active {
-    background: rgba(130, 226, 229, 0.3);
-}
-
-.copy-message {
-    color: #82e2e5;
-    font-size: 16px;
-    font-family: monospace;
-    margin-top: 10px;
-    text-align: center;
-    animation: fadeOut 2s ease;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.close-button {
-    background: transparent;
-    border: none;
-    color: #82e2e5;
-    font-size: 14px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    font-family: monospace;
-    margin-left: auto;
-}
-
-.close-button:hover {
-    color: white;
 }
