@@ -73,6 +73,7 @@
     cursor: pointer;
     transition: color 0.3s ease;
     font-family: monospace;
+    margin-left: auto;
 }
 
 .close-button:hover {
