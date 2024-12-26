@@ -2,71 +2,79 @@
     position: fixed;
     top: 150px;
     right: 20px;
-    cursor: pointer;
-    z-index: 1000;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: #60dfd8;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-    border: 2px solid transparent;
-    border-image: linear-gradient(45deg, rgba(192, 192, 192, 0.8), rgba(82, 150, 177, 0.8), rgba(40, 94, 138, 0.8));
-    border-image-slice: 1;
+    color: #82e2e5;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(52, 191, 255, 0.2);
+    cursor: pointer;
     transition: all 0.6s ease;
-    backdrop-filter: blur(10px); /* Applies the blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
-    background-clip: padding-box; /* Ensures the background stays within the padding */
+    z-index: 1000;
 }
 
 .floating-contact-button:hover {
-    scale: 1.05;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
-    background: linear-gradient(45deg, rgba(192, 192, 192, 0.8), rgba(82, 150, 177, 0.8), rgba(40, 94, 138, 0.8));
-    border-image: 0px;
-    backdrop-filter: blur(15px); /* Slightly increase blur on hover */
-    -webkit-backdrop-filter: blur(15px); /* For Safari support */
+    box-shadow: 0 8px 32px rgba(52, 191, 255, 0.4);
 }
 
 .contact-card {
-    position: fixed; /* Ensures the card is positioned relative to the viewport */
-    top: 150px;      /* Aligns vertically with the button */
-    right: 20px;     /* Positions the card slightly to the left of the button */
-    width: 250px;
-    padding: 15px;
-    background-color: #ffffff; /* Background color of the card */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    z-index: 999; /* Ensures the card stays on top */
-    border: 1px solid #ddd;
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px rgba(52, 191, 255, 0.2);
+    animation: slideIn 0.3s ease;
     z-index: 1001;
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .contact-card h3 {
-    margin: 0 0 10px;
-    font-size: 18px;
-    color: #333;
+    color: #82e2e5;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: monospace;
 }
 
 .contact-card p {
-    margin: 0 0 5px;
-    font-size: 14px;
-    color: #666;
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    font-family: monospace;
 }
 
 .close-button {
     background: transparent;
     border: none;
+    color: #82e2e5;
     font-size: 14px;
-    color: #666;
     cursor: pointer;
-    margin-bottom: 10px;
-    text-decoration: underline;
-    margin-left: auto;
+    transition: color 0.3s ease;
+    font-family: monospace;
 }
 
 .close-button:hover {
-    color: #333;
+    color: white;
 }
