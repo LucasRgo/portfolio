@@ -56,12 +56,6 @@ const ContactButton = () => {
                         >
                             {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
                         </div>
-                        <div
-                            className={`contact-row ${copiedItem === 'phone' ? 'copied' : ''}`}
-                            onClick={() => handleCopy('(123) 456-7890', 'phone')}
-                        >
-                            {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
-                        </div>
                     </div>
                     <button className="close-button" onClick={handleToggleCard}>
                         Close
