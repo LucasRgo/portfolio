@@ -56,12 +56,6 @@ const ContactButton = () => {
                         >
                             {copiedItem === 'phone' ? 'Copied!' : '(123) 456-7890'}
                         </div>
-                        <div
-                            className={`contact-row ${copiedItem === 'git' ? 'copied' : ''}`}
-                            onClick={() => handleCopy('my github profile', 'git')}
-                        >
-                            {copiedItem === 'git' ? 'Copied!' : 'my github profile'}
-                        </div>
                     </div>
                     <button className="close-button" onClick={handleToggleCard}>
                         Close
