@@ -35,7 +35,9 @@ const ContactButton = () => {
                     <p>Email: example@example.com</p>
                     <p>Phone: (123) 456-7890</p>
                 </div>
-            )}
+            )
+            
+            }
         </>
     );
 };
