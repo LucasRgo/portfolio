@@ -33,7 +33,7 @@
 .contact-card {
     position: fixed; /* Ensures the card is positioned relative to the viewport */
     top: 150px;      /* Aligns vertically with the button */
-    right: 80px;     /* Positions the card slightly to the left of the button */
+    right: 20px;     /* Positions the card slightly to the left of the button */
     width: 250px;
     padding: 15px;
     background-color: #ffffff; /* Background color of the card */
