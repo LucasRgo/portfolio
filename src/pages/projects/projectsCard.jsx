@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
     const [wasPlayButtonClicked, SetWasPlayButtonClicked] = useState(false);
 
     const handleClick = () => {
-        if (project.id === 3) {
+        if (project.id === 4) {
             window.open(project.youtubeUrl, '_blank');
         } else {
             SetWasPlayButtonClicked(true);

@@ -7,6 +7,7 @@ import movie from '/movie.webp';
 import flow from '/flow.webp';
 import neidi from '/neidi.webp';
 import AOS from 'aos';
+import objectDectition from '/objectDetection.png';
 import 'aos/dist/aos.css';
 
 const Projects = () => {
@@ -47,6 +48,18 @@ const Projects = () => {
         },
         {
             id: 3,
+            title: "Real-Time Video Object Detection",
+            subtitle: "An AI detection system with real-time confidence and IoU adjustments.",
+            description: `
+                    This project combines Flask and an ONNX model on the backend with a React frontend using Fabric.js to deliver real-time video object detection. 
+                    Users can adjust confidence and IoU thresholds, instantly seeing how these changes affect detection accuracy through a dynamic dashboard. 
+                    The system offers a seamless integration of AI and interactive visualization, making it easy to fine-tune model parameters and view the results in real-time, 
+                    demonstrating the power of full-stack AI applications in video analysis.`,
+            image: objectDectition,
+            youtubeUrl: "4jSHvC8fDk0?start=6"
+        },
+        {
+            id: 4,
             title: "Neidi Cred",
             subtitle: "A complete sales website where users can view prices and calculate monthly installments.",
             description: `
@@ -57,7 +70,7 @@ const Projects = () => {
             youtubeUrl: "https://neidicred.com.br"
         },
         {
-            id: 4,
+            id: 5,
             title: "CS50 commerce exercise",
             subtitle: "An auction site where users can create listings, place bids, and manage a watchlist.",
             description: `
