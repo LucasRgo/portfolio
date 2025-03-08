@@ -1,7 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
+import { LanguageContext } from './LanguageContext';
 import './contactButton.css';
 
 const ContactButton = () => {
+    const { language } = useContext(LanguageContext);
     const [isCardOpen, setIsCardOpen] = useState(false);
     const [copiedItem, setCopiedItem] = useState(null);
     const cardRef = useRef(null);
@@ -50,13 +52,13 @@ const ContactButton = () => {
         <>
             {!isCardOpen && (
                 <button className="floating-contact-button" onClick={handleToggleCard}>
-                    Contact me here
+                    {language === "pt" ? "Entre em contato" : "Contact me here"}
                 </button>
             )}
 
             {isCardOpen && (
                 <div className="contact-card" ref={cardRef}>
-                    <h3>Contact</h3>
+                    <h3>{language === "pt" ? "Contato" : "Contact"}</h3>
                     <div className="contact-table">
                         {/* Email */}
                         <div
@@ -67,7 +69,9 @@ const ContactButton = () => {
                                 <i className="fas fa-envelope"></i> Email
                             </span>
                             <span className="contact-value">
-                                {copiedItem === 'email' ? 'Copied!' : 'lucas.lrg0005@gmail.com'}
+                                {copiedItem === 'email' 
+                                    ? (language === "pt" ? "Copiado!" : "Copied!") 
+                                    : 'lucas.lrg0005@gmail.com'}
                             </span>
                             <i className="fas fa-copy action-icon"></i>
                         </div>
@@ -78,10 +82,12 @@ const ContactButton = () => {
                             onClick={() => handleCopy('+55 (63) 99206-0528', 'phone')}
                         >
                             <span className="contact-label">
-                                <i className="fas fa-phone"></i> Phone
+                                <i className="fas fa-phone"></i> {language === "pt" ? "Telefone" : "Phone"}
                             </span>
                             <span className="contact-value">
-                                {copiedItem === 'phone' ? 'Copied!' : '+55 (63) 99206-0528'}
+                                {copiedItem === 'phone' 
+                                    ? (language === "pt" ? "Copiado!" : "Copied!") 
+                                    : '+55 (63) 99206-0528'}
                             </span>
                             <i className="fas fa-copy action-icon"></i>
                         </div>
@@ -99,7 +105,7 @@ const ContactButton = () => {
                         </div>
                     </div>
                     <button className="close-button" onClick={handleToggleCard}>
-                        Close
+                        {language === "pt" ? "Fechar" : "Close"}
                     </button>
                 </div>
             )}

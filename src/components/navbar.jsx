@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { LanguageContext } from './LanguageContext';
 import './navbar.css';
 
 function CustomNavbar() {
   const location = useLocation();
+  const { language } = useContext(LanguageContext); 
 
   return (
     <nav className="glass-navbar">
@@ -12,17 +14,17 @@ function CustomNavbar() {
           <Link
             to="/"
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
-            Home
+            {language === "pt" ? "Início" : "Home"}  
           </Link>
           <Link
             to="/projects"
             className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`}>
-            Projects
+            {language === "pt" ? "Projetos" : "Projects"} 
           </Link>
           <Link
             to="/resume"
             className={`nav-link ${location.pathname === '/resume' ? 'active' : ''}`}>
-            Resume
+            {language === "pt" ? "Currículo" : "Resume"}  
           </Link>
         </div>
       </div>

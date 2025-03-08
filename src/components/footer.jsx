@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from './LanguageContext';
 import './footer.css';
 
 function Footer() {
+    const { language } = useContext(LanguageContext);  // Acessando o idioma através do contexto
+
     return (
         <footer id="footer" className="footer bg-dark text-light py-4">
             <div className="container text-center" id="footer-container">
@@ -9,12 +12,12 @@ function Footer() {
                     <div className="col-md-6" id="footer-brand">
                         <h1 className="red-orange"><i className="bi bi-code-slash red-orange">!</i></h1>
                         <h5 className="footer-copyright">
-                            &copy; 2024 Coded by <a href="https://lucasrgoveia.tech/" className="lucas">Lucas R Goveia</a>, Inc. All rights reserved.
+                            &copy; 2024 {language === "pt" ? "Coded by" : "Desenvolvido por"} <a href="https://lucasrgoveia.tech/" className="lucas">Lucas R Goveia</a>, Inc. {language === "pt" ? "Todos os direitos reservados." : "All rights reserved."}
                         </h5>
                     </div>
 
                     <div className="col-md-3" id="footer-social-media">
-                        <h4 className="footer-title">Social media</h4>
+                        <h4 className="footer-title">{language === "pt" ? "Redes sociais" : "Social media"}</h4>
                         <ul className="footer-list list-unstyled">
                             <li className="footer-list-item">
                                 <a href="https://www.linkedin.com/in/lucasrgoveiadev/"
@@ -37,7 +40,7 @@ function Footer() {
                                 className="footer-link"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                    <i className="bi bi-envelope footer-icon"></i>E-mail
+                                    <i className="bi bi-envelope footer-icon"></i>{language === "pt" ? "E-mail" : "E-mail"}
                                 </a>
                             </li>
                             <li className="footer-list-item">
@@ -52,22 +55,22 @@ function Footer() {
                     </div>
 
                     <div className="col-md-3" id="footer-reference">
-                        <h4 className="footer-title">Reference</h4>
+                        <h4 className="footer-title">{language === "pt" ? "Referências" : "Reference"}</h4>
                         <ul className="footer-list list-unstyled">
                             <li className="footer-list-item">
-                                <a href="/#about" className="footer-link">About me</a>
+                                <a href="/#about" className="footer-link">{language === "pt" ? "Sobre mim" : "About me"}</a>
                             </li>
 
                             <li className="footer-list-item">
                                 <a href="mailto:lucas.lrg.0005@gmail.com"
-                                className="footer-link">Contact</a>
+                                className="footer-link">{language === "pt" ? "Contato" : "Contact"}</a>
                             </li>
                             <li className="footer-list-item">
                                 <a href="/projects#project"
-                                className="footer-link">Projects</a>
+                                className="footer-link">{language === "pt" ? "Projetos" : "Projects"}</a>
                             </li>
                             <li className="footer-list-item">
-                                <a href="/" className="footer-link">Homepage</a>
+                                <a href="/" className="footer-link">{language === "pt" ? "Página inicial" : "Homepage"}</a>
                             </li>
                         </ul>
                     </div>
@@ -76,7 +79,5 @@ function Footer() {
         </footer>
     );
 }
-
-
 
 export default Footer;

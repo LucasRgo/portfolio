@@ -10,6 +10,7 @@ import Projects from './pages/projects/projects';
 import Resume from './pages/resume/resume';
 import ScrollToTop from './scrollTop';
 import ContactButton from './components/contactButton';
+import LanguageProvider from './components/LanguageContext';
 import './App.css';
 
 
@@ -68,13 +69,15 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <ContactButton />
-      <MyNavbar />
-      <AnimatedRoutes />
-      <Footer />
-d    </Router>
+    <LanguageProvider>
+        <Router>
+            <ScrollToTop />
+            <ContactButton />
+            <MyNavbar />
+            <AnimatedRoutes />
+            <Footer />
+        </Router>
+    </LanguageProvider>
   );
 }
 
