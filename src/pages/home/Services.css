@@ -316,9 +316,12 @@ i {
 /* Mobile-specific styles */
 @media (max-width: 868px) {
     .services-section {
-        padding: 5% 2%;
-        width: 100%;
-        overflow-x: hidden;
+        padding: 5% 0;
+        padding-left: 2%;
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
     }
 
     .services-section h2 {
@@ -336,7 +339,7 @@ i {
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 3%;
-        padding: 2% 4%;
+        padding: 2% 0%;
         margin: 0;
         width: 99.5%;
         scrollbar-width: none;
@@ -344,7 +347,7 @@ i {
     }
 
     .service-card {
-        max-width: 97%;
+        width: 90vw;
         min-width: 320px;
         scroll-snap-align: start;
         margin-bottom: 3%;
@@ -402,6 +405,9 @@ i {
     .additional-services {
         padding: 5% 2%;
         width: 100%;
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .additional-services h2 {
@@ -418,7 +424,7 @@ i {
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 3%;
-        padding: 2% 4%;
+        padding: 2% 0%;
         margin: 3% 0;
         width: 99%;
         scrollbar-width: none;
@@ -468,5 +474,10 @@ i {
     .services-grid,
     .services-list {
         scroll-behavior: smooth;
+    }
+
+    @viewport {
+        width: device-width;
+        zoom: 1.0;
     }
 }
