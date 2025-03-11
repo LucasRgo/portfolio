@@ -31,7 +31,7 @@ const Dynamic = () => {
         <div id="dynamic-text" className="col-lg-4">
           <div id="dynamic-h1" className="h1">
             {language === "pt" 
-              ? "ALGUÉM CAPAZ DE CONSTRUIR SITES DINÂMICOS" 
+              ? "ALGUÉM CAPAZ DE CONSTRUIR SITES REPONSIVOS" 
               : "SOMEONE CAPABLE OF BUILDING DYNAMIC WEBSITES"
             }
           </div>

@@ -9,7 +9,6 @@ Para melhorar seu site e atrair mais clientes de freelancer, aqui estão algumas
    - **Serviços**: Adicione uma seção logo abaixo da introdução com uma tabela ou cards que descrevam os serviços que você oferece.
    - **Sobre Mim**: Mantenha a seção "Sobre Mim" para que os clientes possam conhecer mais sobre você.
    - **Habilidades**: Mantenha a seção de habilidades para mostrar suas competências técnicas.
-   - **Projetos**: Inclua uma seção de projetos para mostrar seu portfólio.
    - **Certificados**: Mantenha a seção de certificados para validar suas habilidades.
    - **Depoimentos**: Adicione uma seção de depoimentos de clientes anteriores.
    - **Contato**: Mantenha o botão de contato flutuante e adicione uma seção de contato com um formulário.

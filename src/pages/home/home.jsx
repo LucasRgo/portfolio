@@ -6,6 +6,7 @@ import About from './about';
 import CertificatesSection from './certifcates';
 import Dynamic from './dynamic';
 import Skills from './skills';
+import Services from './Services';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import perfil from '/perfil.webp';
@@ -17,12 +18,14 @@ const Home = () => {
     useEffect(() => {
         AOS.init();
     }, []);
+    
+    
 
     return (
         <>
             <section id=''>
             <div className="home-container">
-                <div className="intro-text" data-aos="flip-up" data-aos-delay="500">
+                <div className="intro-text" data-aos="flip-up" data-aos-delay="600">
                     <Avatar
                         alt={language === "pt" ? "Perfil Lucas" : "Lucas Profile"}
                         src={perfil}
@@ -30,10 +33,10 @@ const Home = () => {
                         className="avatar"
                     />
                     <div className="intro-content">
-                        <h1>{language === "pt" ? "Eu sou o Lucas" : "Hi, I’m Lucas"}</h1>
+                        <h1>{language === "pt" ? "Lucas R. Goveia" : "Hi, I’m Lucas"}</h1>
                         <p>
                             {language === "pt"
-                                ? "Desenvolvedor Full Stack apaixonado por criar experiências web refinadas e bem-polidas"
+                                ? "Transformo suas ideias em sites excepcionais, com código de alto nível e design impecável."
                                 : "A Full Stack Developer passionate about creating refined and polished web experiences"}
                         </p>
                         <button onClick={() => window.open('mailto:lucas.lrg.0005@gmail.com', '_blank')} className="contact-button rounded-3">
@@ -44,6 +47,7 @@ const Home = () => {
                 <img id="code" src={code} alt={language === "pt" ? "Fundo de código" : "Code background"} />
             </div>
             </section>
+            <Services />
             <About />
             <Skills />
             <Dynamic />
