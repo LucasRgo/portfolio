@@ -17,12 +17,12 @@ import {
 import "./skills.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect, useContext } from 'react'; // Added useContext
-import { LanguageContext } from '../../components/LanguageContext'; // Adjust path if needed
+import React, { useEffect, useContext } from "react"; // Added useContext
+import { LanguageContext } from "../../components/LanguageContext"; // Adjust path if needed
 
 const Skills = () => {
-  const { language } = useContext(LanguageContext); // Get language from context
-  
+    const { language } = useContext(LanguageContext); // Get language from context
+
     useEffect(() => {
         AOS.init();
     }, []);

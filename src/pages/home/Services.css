@@ -34,15 +34,27 @@
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     gap: 2rem;
-    max-width: 1600px;
+    padding: 1rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 100%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.services-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 .service-card {
+    scroll-snap-align: start;
+    min-width: 350px;
+    flex: 0 0 auto;
+    width: 350px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 25px;
     backdrop-filter: blur(10px);
@@ -301,110 +313,160 @@ i {
     text-align: justify;
 }
 
-@media (max-width: 768px) {
+/* Mobile-specific styles */
+@media (max-width: 868px) {
     .services-section {
-        padding: 2%;
+        padding: 5% 2%;
         width: 100%;
+        overflow-x: hidden;
+    }
+
+    .services-section h2 {
+        font-size: 150%;
+        margin-bottom: 5%;
     }
 
     .services-section h2::after {
-        width: 60%;
-    }    
-    
-    .services-section h2 {
-        font-size: 1.5rem;
+        width: 50%;
+        height: 0.2%;
     }
 
     .services-grid {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding: 0;
-        gap: 0;
+        gap: 3%;
+        padding: 2% 4%;
         margin: 0;
-        width: 100%;
+        width: 99.5%;
         scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    .services-grid::-webkit-scrollbar {
-        display: none;
+        -webkit-overflow-scrolling: touch;
     }
 
     .service-card {
+        max-width: 97%;
+        min-width: 320px;
         scroll-snap-align: start;
-        width: 94%;
-        margin-right: 2%;
-        flex: 0 0 auto;
+        margin-bottom: 3%;
+    }
+
+    .card-header {
+        padding: 4%;
+        height: auto;
+    }
+
+    .card-header h3 {
+        font-size: 120%;
+    }
+
+    .card-header h4 {
+        font-size: 100%;
+    }
+
+    .card-body {
+        padding: 4%;
+    }
+
+    .price-tag {
+        gap: 1%;
+        margin-bottom: 3%;
+    }
+
+    .original-price {
+        font-size: 90%;
+        margin-right: 17%;
+    }
+
+    .price-value {
+        font-size: 250%;
+    }
+
+    .deadline {
+        margin: 2% 0;
+        font-size: 90%;
+    }
+
+    .for-who h5,
+    .features h5 {
+        font-size: 100%;
+        margin: 2% 0;
+    }
+
+    .features li {
+        padding-left: 5%;
+        margin-bottom: 2%;
+        font-size: 90%;
+    }
+
+    /* Additional Services Section */
+    .additional-services {
+        padding: 5% 2%;
+        width: 100%;
+    }
+
+    .additional-services h2 {
+        font-size: 150%;
+        margin-bottom: 5%;
+    }
+
+    .additional-services h2::after {
+        width: 60%;
     }
 
     .services-list {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding: 1%;
-        gap: 1%;
-        width: 96%;
-        margin: 0 auto;
+        gap: 3%;
+        padding: 2% 4%;
+        margin: 3% 0;
+        width: 99%;
         scrollbar-width: none;
-        -ms-overflow-style: none;
     }
 
+    .service-item {
+        min-width: 85%;
+        scroll-snap-align: start;
+        padding: 3%;
+        margin-bottom: 0%;
+    }
+
+    .special-touch {
+        width: 90%;
+        margin: 5% auto;
+        padding: 5%;
+    }
+
+    .special-touch h3 {
+        font-size: 130%;
+        margin-bottom: 5%;
+    }
+
+    .special-touch h3::after {
+        width: 40%;
+    }
+
+    .special-touch p {
+        font-size: 90%;
+        line-height: 150%;
+    }
+
+    /* Hide scrollbars but keep functionality */
+    .services-grid::-webkit-scrollbar,
     .services-list::-webkit-scrollbar {
         display: none;
     }
 
-    .service-item {
-        scroll-snap-align: start;
-        width: 85%;
-        margin-right: 5%;
-        flex: 0 0 auto;
-        padding: 1rem;
+    /* Add visual indication for scrolling */
+    .services-grid,
+    .services-list {
+        -ms-overflow-style: none;
+        position: relative;
     }
 
-    .service-item h5 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .service-item p {
-        font-size: 1rem;
-        line-height: 1.4;
-        margin: 0;
-    }
-
-    .special-touch {
-        padding: 1rem;
-        margin: 1.5rem auto;
-        width: 94%;
-    }
-
-    .special-touch h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .special-touch h3::after {
-        bottom: -5px;
-        width: 120px;
-        height: 2px;
-    }
-
-    .special-touch p {
-        font-size: 1rem;
-        line-height: 1.4;
-        margin: 0;
-    }
-
-    .card-header {
-        height: auto;
-        min-height: 80px;
-        padding: 3%;
-    }
-
-    .card-body {
-        padding: 3%;
+    /* Add smooth scrolling */
+    .services-grid,
+    .services-list {
+        scroll-behavior: smooth;
     }
 }
