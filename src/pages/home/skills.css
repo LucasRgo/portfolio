@@ -119,22 +119,25 @@
 
   .technology-card {
       padding: 0.5rem; /* Adjust padding for smaller screens */
+      margin: 0;
   }
 
   .technology-icon {
-      font-size: 3rem; /* Adjust icon size for mobile */
+      font-size: 2rem; /* Adjust icon size for mobile */
+      margin-bottom: 0.5rem;
   }
 
   .technology-details h3 {
-      font-size: 1.3rem; /* Adjust heading size */
+      font-size: 1rem; /* Adjust heading size */
+      margin-bottom: 0.5rem;
   }
 
   .technology-proficiency {
-      gap: 0.3rem; /* Reduce gap between proficiency dots */
+      gap: 0.2rem; /* Reduce gap between proficiency dots */
   }
 
   .proficiency-dot {
-      width: 10px; /* Adjust the size of proficiency dots */
-      height: 10px;
+      width: 8px; /* Adjust the size of proficiency dots */
+      height: 8px;
   }
 }
