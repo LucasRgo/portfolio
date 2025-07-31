@@ -99,18 +99,18 @@
     border-image: linear-gradient(45deg, #ffffff, #a9fcff, #52ceff);
     border-image-slice: 1;
     cursor: pointer;
-    transition: all 0.6s ease;
     background-clip: padding-box;
+    transition: color 0.3s ease-in-out, background 0.2s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out 0.2s;
 }
 
 .contact-button:hover {
-    color: white;
+    color: #042744;
     background: linear-gradient(45deg, #c0c0c0d2, #5296b1, #285e8a);
     border: 2px solid transparent;
     border-image: linear-gradient(45deg, #c0c0c0d2, #5296b1, #285e8a);
     border-image-slice: 1;
-    transition: all 0.6s ease;
-
+    transform: scale(1.05);
+    box-shadow: 0 0 45px rgba(74, 139, 192, 0.75);
 }
 
 

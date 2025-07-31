@@ -1,37 +1,40 @@
-import React, { useContext, useEffect } from 'react';
-import resume from "/resume.pdf";
+import React, { useContext, useEffect } from "react";
+import resumePT from "./Curriculo_LucasGoveia.pdf";
+import resumeEN from "./Resume_LucasGoveia.pdf";
 import "./resume.css";
-import { LanguageContext } from '../../components/LanguageContext';
+import { LanguageContext } from "../../components/LanguageContext";
 import "aos/dist/aos.css";
 
 const Resume = () => {
-    const resumeUrl = `${resume}#zoom=page-width`;
+    const resumeUrl = `${resumePT}#zoom=page-width`;
+    const resumeEnUrl = `${resumeEN}#zoom=page-width`;
     const { language } = useContext(LanguageContext);
 
     return (
         <div className="resume-container">
-            <a
-                data-aos="flip-up"
-                data-aos-delay="300"
-                href={resumeUrl}
-                download="RESUME Lucas R Goveia - Fullstack Developer.pdf"
-                className="resume-download"
-            >
-                {language === "pt"
-                    ? "Baixar Currículo em PDF"
-                    : "Download PDF Resume"}{" "}
-            </a>
+            <div className="resume-buttons">
+                <a
+                    data-aos="flip-up"
+                    data-aos-delay="300"
+                    href={resumeUrl}
+                    download="CURRICULO_Lucas_Goveia_Desenvolvedor_Fullstack.pdf"
+                    className="resume-download">
+                    {language === "pt"
+                        ? "Baixar Currículo (Português)"
+                        : "Download Resume (Portuguese)"}
+                </a>
+                <a
+                    data-aos="flip-up"
+                    data-aos-delay="400"
+                    href={resumeEnUrl}
+                    download="RESUME_Lucas_Goveia_Fullstack_Developer.pdf"
+                    className="resume-download">
+                    {language === "pt" ? "Download Resume (English)" : "Download Resume (English)"}
+                </a>
+            </div>
 
-            <div
-                className="resume-iframe-container"
-                data-aos="fade-up"
-                data-aos-delay="500"
-            >
-                <iframe
-                    src={resumeUrl}
-                    title="Resume PDF"
-                    className="resume-iframe"
-                />
+            <div className="resume-iframe-container" data-aos="fade-up" data-aos-delay="500">
+                <iframe src={resumeUrl} title="Resume PDF" className="resume-iframe" />
             </div>
         </div>
     );
