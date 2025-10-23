@@ -6,7 +6,6 @@ import About from "./about";
 import CertificatesSection from "./certifcates";
 import Dynamic from "./dynamic";
 import Skills from "./skills";
-import Services from "./Services";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import perfil from "/perfil.webp";
@@ -75,7 +74,6 @@ const Home = () => {
                     />
                 </div>
             </section>
-            <Services />
             <About />
             <Skills />
             <Dynamic />
