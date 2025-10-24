@@ -50,6 +50,7 @@
 
 .about-content {
     display: flex;
+    flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
@@ -59,7 +60,7 @@
 .about-image-wrapper {
     flex: 0.8;
     position: relative;
-    max-width: 39%;
+    max-width: 29%;
     display: flex;
     justify-content: center;
 }
@@ -69,9 +70,9 @@
     height: auto;
     border-radius: 10px;
     z-index: 1;
-    box-shadow: 15px 0 40px rgba(82, 150, 177, 0.4),
-        20px 0 60px rgba(82, 150, 177, 0.2),
-        25px 0 80px rgba(82, 150, 177, 0.1);
+    box-shadow: -15px 0 40px rgba(82, 150, 177, 0.4),
+        -20px 0 60px rgba(82, 150, 177, 0.2),
+        -25px 0 80px rgba(82, 150, 177, 0.1);
 }
 
 .image-overlay-text {
@@ -98,7 +99,7 @@
     max-width: 40%;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 4rem;
+    margin-left: 4rem;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;

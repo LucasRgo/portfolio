@@ -11,7 +11,7 @@ import Skills from "./skills";
 import ResultsSection from "./results";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import perfil from "/perfil.webp";
+import perfil from "/natural2.jpg";
 import Avatar from "@mui/material/Avatar";
 
 const Home = () => {
@@ -34,11 +34,11 @@ const Home = () => {
                             className="avatar"
                         />
                         <div className="intro-content me-2">
-                            <h1>{language === "pt" ? "Lucas R. Goveia" : "Hi, I’m Lucas"}</h1>
+                            <h1>{language === "pt" ? "Lucas R. Goveia" : "Lucas R. Goveia"}</h1>
                             <p>
                                 {language === "pt"
                                     ? "Transformo ideias em SaaS lucrativos com Django + React e visão de negócio."
-                                    : "A Full Stack Developer passionate about creating refined and polished web experiences"}
+                                    : "I transform ideas into profitable SaaS with Django + React and business vision."}
                             </p>
                             <button
                                 onClick={() => window.open("mailto:lucas.lrg.0005@gmail.com", "_blank")}

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import resumePT from "./Curriculo_LucasGoveia.pdf";
-import resumeEN from "./Resume_LucasGoveia.pdf";
+import resumePT from "./Curriculo_Lucas_R_Goveia.pdf";
+import resumeEN from "./RESUME_Lucas_R_Goveia.pdf";
 import "./resume.css";
 import { LanguageContext } from "../../components/LanguageContext";
 import "aos/dist/aos.css";
@@ -34,7 +34,11 @@ const Resume = () => {
             </div>
 
             <div className="resume-iframe-container" data-aos="fade-up" data-aos-delay="500">
-                <iframe src={resumeUrl} title="Resume PDF" className="resume-iframe" />
+                {language === "pt" ? (
+                    <iframe src={resumeUrl} title="Resume PDF" className="resume-iframe" />
+                ) : (
+                    <iframe src={resumeEnUrl} title="Resume PDF" className="resume-iframe" />
+                )}
             </div>
         </div>
     );
