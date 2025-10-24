@@ -1,11 +1,13 @@
 .about-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 85vh;
     position: relative;
     background-color: #05050a;
     overflow: hidden;
+    padding-top: 3rem;
 }
 
 .about-container::before {
@@ -32,6 +34,20 @@
     }
 }
 
+.about-heading {
+    font-family: monospace;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(45deg, #ffffff, #5296b1, #285e8a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    font-weight: 700;
+}
+
 .about-content {
     display: flex;
     align-items: flex-start;
@@ -41,9 +57,9 @@
 }
 
 .about-image-wrapper {
-    flex: 1;
+    flex: 0.8;
     position: relative;
-    max-width: 50%;
+    max-width: 35%;
     display: flex;
     justify-content: center;
 }
@@ -53,6 +69,9 @@
     height: auto;
     border-radius: 10px;
     z-index: 1;
+    box-shadow: 15px 0 40px rgba(82, 150, 177, 0.4),
+        20px 0 60px rgba(82, 150, 177, 0.2),
+        25px 0 80px rgba(82, 150, 177, 0.1);
 }
 
 .image-overlay-text {
@@ -76,7 +95,7 @@
 .about-text-overlay {
     flex: 1;
     position: relative;
-    max-width: 34%;
+    max-width: 40%;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 4rem;
@@ -101,21 +120,67 @@
     text-align: center;
 }
 
+.about-subtitle {
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #ffffff, #5296b1, #285e8a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-weight: 700;
+}
+
 .about-text p {
     font-family: monospace;
-    line-height: 1.4;
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-    color: white;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
     text-align: justify;
     text-justify: inter-word;
     margin: 0;
-    padding: 0;
+    padding: 1rem 0;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
 
+.about-text p strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.about-text p .gradient-text {
+    background: linear-gradient(45deg, #5296b1, #285e8a, #5296b1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.about-text p .tech-highlight {
+    color: #5296b1;
+    font-weight: 600;
+}
+
+.about-text p .code-highlight {
+    color: #285e8a;
+    font-weight: 600;
+}
+
+.about-text p .business-highlight {
+    color: #5296b1;
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
+    .about-heading {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
     .about-content {
         flex-direction: column;
         align-items: center;
@@ -125,6 +190,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
+        max-width: 100%;
     }
 
     .about-image {

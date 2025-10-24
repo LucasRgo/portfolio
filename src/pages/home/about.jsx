@@ -14,49 +14,36 @@ const About = () => {
 
     return (
         <section className="about-container" id="about">
-            <div
-                className="about-content"
-                data-aos="fade-up"
-                data-aos-delay="500"
-            >
+            <h2 className="about-heading" data-aos="fade-down" data-aos-delay="300">
+                POR QUE EMPRESAS E EMPREENDEDORES CONFIAM EM MIM?
+            </h2>
+            <div className="about-content" data-aos="fade-up" data-aos-delay="500">
                 <div className="about-image-wrapper">
-                    <div className="image-overlay-text">
-                        <h2>Lucas 'CJ'</h2>
-                        <p>
-                            {language === "pt"
-                                ? "Desenvolvedor Fullstack"
-                                : "Fullstack Developer"}
-                        </p>
-                    </div>
-                    <img
-                        className="about-image rounded-5"
-                        src={profilePic}
-                        alt="Lucas 'CJ'"
-                    />
+                    <img className="about-image rounded-5" src={profilePic} alt="Lucas 'CJ'" />
                 </div>
                 <div className="about-text-overlay">
                     <div className="about-text">
-                        <h2>{language === "pt" ? "Sobre Mim" : "About Me"}</h2>
+                        <h4 className="about-subtitle" data-aos="fade-down" data-aos-delay="300">
+                            "Meu código não é só limpo ele é ESTRATÉGICO"
+                        </h4>
                         <p>
-                            "No curso <strong>CS50 de Harvard</strong>, descobri
-                            minha paixão pela engenharia de software, explorando
-                            os princípios por trás da internet aos algoritmos de
-                            comunicação em tempo real. Sempre fascinado por
-                            computadores desde cedo, transformei essa
-                            curiosidade em ação. Desenvolvi o{" "}
-                            <strong> Movie Wizard</strong>, uma plataforma de
-                            recomendações personalizadas de filmes, e o site da
-                            NeidiCred, que
-                            <strong>
-                                {" "}
-                                aumentou suas vendas online em 123%{" "}
-                            </strong>
-                            Esses projetos são provas concretas da minha
-                            capacidade de criar um impacto real. Hoje, como
-                            programador freelancer, conduzo projetos do início
-                            ao fim com autonomia, transformando ideias em sites
-                            de excelência, com de alto nível e design
-                            impecável!"
+                            Sou <strong>Lucas Goveia</strong>, desenvolvedor fullstack especializado em{" "}
+                            <span className="tech-highlight">Django + React</span>.
+                        </p>
+                        <p>
+                            Não entrego apenas funcionalidades. Crio{" "}
+                            <strong className="gradient-text">soluções que geram receita recorrente</strong> e
+                            escalam com o negócio.
+                        </p>
+                        <p>
+                            Já <strong className="gradient-text">aumentei vendas online em 123%</strong> e construí
+                            sistemas que processam <strong>milhares de transações mensais</strong>.
+                        </p>
+                        <p>
+                            Se você busca um desenvolvedor que entende tanto de{" "}
+                            <span className="code-highlight">código</span> quanto de{" "}
+                            <span className="business-highlight">negócio</span>, vamos conversar sobre seu próximo{" "}
+                            <strong>SaaS</strong>.
                         </p>
                     </div>
                 </div>

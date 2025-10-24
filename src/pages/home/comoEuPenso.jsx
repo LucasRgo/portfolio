@@ -1,10 +1,10 @@
 import { useContext, useEffect } from "react";
 import { LanguageContext } from "../../components/LanguageContext";
-import "./authority.css";
+import "./comoEuPenso.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Authority = () => {
+const ComoEuPenso = () => {
     const { language } = useContext(LanguageContext);
 
     useEffect(() => {
@@ -12,21 +12,21 @@ const Authority = () => {
     }, []);
 
     return (
-        <section className="authority-container" id="authority">
-            <div className="authority-content" data-aos="fade-up" data-aos-delay="400">
-                <div className="authority-header">
+        <section className="como-eu-penso-container" id="como-eu-penso">
+            <div className="como-eu-penso-content" data-aos="fade-up" data-aos-delay="400">
+                <div className="como-eu-penso-header">
                     <h2>
                         {language === "pt"
-                            ? "Como transformo código em resultados?"
-                            : "How do I transform code into results?"}
+                            ? "Como eu penso e construo!"
+                            : "How I think and build!"}
                     </h2>
                 </div>
 
-                <div className="authority-cards">
+                <div className="como-eu-penso-cards">
                     <div 
-                        className="authority-card" 
+                        className="como-eu-penso-card" 
                         data-aos="fade-right" 
-                        data-aos-delay="500"
+                        data-aos-delay="250"
                         style={{
                             "--card-color": "#1e3a8a",
                             "--shadow-color": "#1e3a8a"
@@ -50,9 +50,9 @@ const Authority = () => {
                     </div>
 
                     <div 
-                        className="authority-card" 
+                        className="como-eu-penso-card" 
                         data-aos="fade-left" 
-                        data-aos-delay="600"
+                        data-aos-delay="300"
                         style={{
                             "--card-color": "#00FFFF",
                             "--shadow-color": "#00FFFF"
@@ -76,7 +76,7 @@ const Authority = () => {
                     </div>
 
                     <div 
-                        className="authority-card" 
+                        className="como-eu-penso-card" 
                         data-aos="fade-right" 
                         data-aos-delay="700"
                         style={{
@@ -102,7 +102,7 @@ const Authority = () => {
                     </div>
 
                     <div 
-                        className="authority-card" 
+                        className="como-eu-penso-card" 
                         data-aos="fade-left" 
                         data-aos-delay="800"
                         style={{
@@ -132,5 +132,4 @@ const Authority = () => {
     );
 };
 
-export default Authority;
-
+export default ComoEuPenso;

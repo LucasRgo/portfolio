@@ -4,7 +4,7 @@ import { LanguageContext } from "../../components/LanguageContext";
 import "./home.css";
 import code from "/BG.webp";
 import About from "./about";
-import Authority from "./authority";
+import ComoEuPenso from "./comoEuPenso";
 import CertificatesSection from "./certifcates";
 import Dynamic from "./dynamic";
 import Skills from "./skills";
@@ -54,11 +54,11 @@ const Home = () => {
                     <img id="code" src={code} alt={language === "pt" ? "Fundo de código" : "Code background"} />
                 </div>
             </section>
-            <Authority />
+            <About />
+            <ComoEuPenso />
             <Skills />
             <Dynamic />
             <CertificatesSection />
-            <About />
         </>
     );
 };
