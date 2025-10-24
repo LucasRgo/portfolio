@@ -8,6 +8,7 @@ import ComoEuPenso from "./comoEuPenso";
 import CertificatesSection from "./certifcates";
 import Dynamic from "./dynamic";
 import Skills from "./skills";
+import ResultsSection from "./results";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import perfil from "/perfil.webp";
@@ -55,9 +56,10 @@ const Home = () => {
                 </div>
             </section>
             <About />
+            <ResultsSection />
             <ComoEuPenso />
-            <Skills />
             <Dynamic />
+            <Skills />
             <CertificatesSection />
         </>
     );

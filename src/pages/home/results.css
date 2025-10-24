@@ -1,0 +1,344 @@
+.results-section {
+    padding: 80px 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 108, 151, 0.5) 0%,
+        rgba(0, 108, 151, 0.1) 50%,
+        rgb(0, 0, 0) 100%
+    );
+    position: relative;
+    overflow: hidden;
+    min-height: 95vh;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.results-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.results-header {
+    margin-bottom: 60px;
+}
+
+.results-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg,
+        #e0e0e0,
+        #5296b1,
+        #2f87cf
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.results-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Carousel Styles */
+.results-carousel .carousel-indicators {
+    bottom: -50px;
+}
+
+.results-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+.results-carousel .carousel-indicators .active {
+    background-color: #5296b1;
+    box-shadow: 0 0 10px rgba(82, 150, 177, 0.5);
+}
+
+.results-section .carousel-control-prev,
+.results-section .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.results-section .carousel-control-prev:hover,
+.results-section .carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.results-section .carousel-control-prev {
+    left: 2%;
+}
+
+.results-section .carousel-control-next {
+    right: 2%;
+}
+
+.results-carousel .carousel-control-prev-icon,
+.results-carousel .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.result-card-carousel {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 8px 32px 0 rgba(52, 191, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    max-width: 600px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-card-carousel:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px 0 rgba(82, 150, 177, 0.4);
+    border-color: rgba(82, 150, 177, 0.3);
+}
+
+.result-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    height: auto;
+    max-height: 550px;
+    min-height: 380px;
+    flex-shrink: 0;
+}
+
+.result-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Content Section */
+.result-content {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+/* Summary Section - Muted and subtle */
+.result-summary {
+    margin-bottom: 0;
+}
+
+.result-summary p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Outcome Section - Bold and prominent */
+.result-outcome {
+    margin-bottom: 0;
+}
+
+.result-outcome p {
+    font-size: 1.15rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.result-highlight {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* Quote Section - Italic and elegant */
+.result-quote {
+    margin-top: 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-quote blockquote {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    margin: 0;
+    line-height: 1.7;
+    font-weight: 400;
+    position: relative;
+    transform: skewX(-10deg);
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-section {
+        padding: 60px 0;
+    }
+
+    .results-title {
+        font-size: 2rem;
+    }
+
+    .results-subtitle {
+        font-size: 1rem;
+    }
+
+    .result-card-carousel {
+        max-width: 90%;
+        min-height: 480px;
+    }
+
+    .result-image-container {
+        min-height: 280px;
+        max-height: 400px;
+    }
+
+    .result-content {
+        padding: 15px 20px;
+        gap: 14px;
+    }
+
+    .result-summary p {
+        font-size: 0.9rem;
+    }
+
+    .result-outcome p {
+        font-size: 1.05rem;
+    }
+
+    .result-quote {
+        padding-top: 10px;
+    }
+
+    .result-quote blockquote {
+        font-size: 0.95rem;
+    }
+
+    .results-section .carousel-control-prev,
+    .results-section .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .results-section .carousel-control-prev {
+        left: 2%;
+    }
+
+    .results-section .carousel-control-next {
+        right: 2%;
+    }
+}
+
+@media (max-width: 576px) {
+    .results-title {
+        font-size: 1.8rem;
+    }
+
+    .result-card-carousel {
+        max-width: 95%;
+        min-height: 440px;
+    }
+
+    .result-image-container {
+        min-height: 240px;
+        max-height: 350px;
+    }
+
+    .result-content {
+        padding: 12px 18px;
+        gap: 12px;
+    }
+
+    .result-summary p {
+        font-size: 0.85rem;
+    }
+
+    .result-outcome p {
+        font-size: 0.95rem;
+    }
+
+    .result-quote {
+        padding-top: 8px;
+        margin-top: 0;
+    }
+
+    .result-quote blockquote {
+        font-size: 0.88rem;
+    }
+
+    .results-carousel .carousel-indicators {
+        bottom: -30px;
+    }
+}
+
+/* Animation for carousel cards */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-card-carousel {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+/* Hover effects for better interactivity */
+.result-card-carousel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(118, 200, 233, 0.25), transparent);
+    transition: left 1.5s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.result-card-carousel:hover::before {
+    left: 100%;
+}

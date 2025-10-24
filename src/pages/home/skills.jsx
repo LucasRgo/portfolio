@@ -13,6 +13,7 @@ import {
     SiC,
     SiPostgresql,
     SiSqlite,
+    SiGit,
 } from "react-icons/si";
 import "./skills.css";
 import AOS from "aos";
@@ -28,22 +29,10 @@ const Skills = () => {
     }, []);
     const technologies = [
         {
-            name: "React",
-            level: 5,
-            icon: <FaReact style={{ color: "#00FFFF" }} />,
-            color: "#00FFFF",
-        },
-        {
             name: "Django",
             level: 5,
             icon: <SiDjango style={{ color: "#2ECC71" }} />,
             color: "#2ECC71",
-        },
-        {
-            name: "Flask",
-            level: 5,
-            icon: <FaFlask style={{ color: "#9B59B6" }} />,
-            color: "#9B59B6",
         },
         {
             name: "Python",
@@ -52,10 +41,10 @@ const Skills = () => {
             color: "#3498DB",
         },
         {
-            name: "JavaScript",
+            name: "React",
             level: 5,
-            icon: <FaJsSquare style={{ color: "#FFE100" }} />,
-            color: "#FFE100",
+            icon: <FaReact style={{ color: "#00FFFF" }} />,
+            color: "#00FFFF",
         },
         {
             name: "TypeScript",
@@ -64,10 +53,16 @@ const Skills = () => {
             color: "#0088FF",
         },
         {
-            name: "C",
+            name: "JavaScript",
             level: 5,
-            icon: <SiC style={{ color: "#4834D4" }} />,
-            color: "#4834D4",
+            icon: <FaJsSquare style={{ color: "#FFE100" }} />,
+            color: "#FFE100",
+        },
+        {
+            name: "Flask",
+            level: 5,
+            icon: <FaFlask style={{ color: "#9B59B6" }} />,
+            color: "#9B59B6",
         },
         {
             name: "HTML/CSS",
@@ -76,16 +71,22 @@ const Skills = () => {
             color: "#FF4757",
         },
         {
+            name: "Postgres",
+            level: 5,
+            icon: <SiPostgresql style={{ color: "#FFA502" }} />,
+            color: "#FFA502",
+        },
+        {
             name: "Docker",
             level: 5,
             icon: <FaDocker style={{ color: "#00A8FF" }} />,
             color: "#00A8FF",
         },
         {
-            name: "SQL",
+            name: "Git",
             level: 5,
-            icon: <FaDatabase style={{ color: "#FFA502" }} />,
-            color: "#FFA502",
+            icon: <SiGit style={{ color: "#4834D4" }} />,
+            color: "#4834D4",
         },
     ];
 

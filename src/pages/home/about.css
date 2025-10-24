@@ -38,7 +38,7 @@
     font-family: monospace;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    background: linear-gradient(45deg, #ffffff, #5296b1, #285e8a);
+    background: linear-gradient(135deg, #285e8a, #5296b1, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -59,7 +59,7 @@
 .about-image-wrapper {
     flex: 0.8;
     position: relative;
-    max-width: 38%;
+    max-width: 39%;
     display: flex;
     justify-content: center;
 }
@@ -124,12 +124,13 @@
     font-family: monospace;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, #ffffff, #5296b1, #285e8a);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #dcf5ff;
     text-align: center;
     font-weight: 700;
+    text-shadow: 0 0 10px rgba(82, 150, 177, 0.8),
+        0 0 20px rgba(82, 150, 177, 0.6),
+        0 0 30px rgba(82, 150, 177, 0.4),
+        0 0 40px rgba(82, 150, 177, 0.2);
 }
 
 .about-text p {
@@ -194,9 +195,12 @@
     }
 
     .about-image {
-        min-width: 230%;
+        width: 100%;
+        max-width: 95%;
         height: auto;
-        border-radius: 0;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: block;
     }
 
     .image-overlay-text {
@@ -208,6 +212,10 @@
         text-align: center;
         margin: 0 auto;
         margin-bottom: 2rem;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .about-text h2 {

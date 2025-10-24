@@ -126,7 +126,7 @@ const ComoEuPenso = () => {
                             </h3>
                             <p>
                                 {language === "pt"
-                                    ? <>Entrego resultados que aparecem nos dashboards: <strong>+123% em vendas online</strong>, <strong>taxas de conversão elevadas</strong> e <strong>usuários mais engajados</strong>. Código que se traduz em <strong>crescimento de negócio</strong>.</>
+                                    ? <>Entrego resultados sólidos: <strong>+123% em vendas online</strong>, <strong>taxas de conversão elevadas</strong> e <strong>usuários mais engajados</strong>. Código que se traduz em <strong>crescimento de negócio</strong>.</>
                                     : <>I deliver results that appear on dashboards: <strong>+123% in online sales</strong>, <strong>elevated conversion rates</strong> and <strong>more engaged users</strong>. Code that translates into <strong>business growth</strong>.</>}
                             </p>
                         </div>
