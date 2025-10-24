@@ -13,7 +13,7 @@ const ComoEuPenso = () => {
 
     return (
         <section className="como-eu-penso-container" id="como-eu-penso">
-            <div className="como-eu-penso-content" data-aos="fade-up" data-aos-delay="400">
+            <div className="como-eu-penso-content" data-aos="fade-up" data-aos-delay="100">
                 <div className="como-eu-penso-header">
                     <h2>
                         {language === "pt"
@@ -28,10 +28,10 @@ const ComoEuPenso = () => {
                 </div>
 
                 <div className="como-eu-penso-cards">
-                    <div 
-                        className="como-eu-penso-card" 
-                        data-aos="fade-right" 
-                        data-aos-delay="250"
+                    <div
+                        className="como-eu-penso-card"
+                        data-aos="fade-right"
+                        data-aos-delay="150"
                         style={{
                             "--card-color": "#1e3a8a",
                             "--shadow-color": "#1e3a8a"
@@ -54,10 +54,10 @@ const ComoEuPenso = () => {
                         </div>
                     </div>
 
-                    <div 
-                        className="como-eu-penso-card" 
-                        data-aos="fade-left" 
-                        data-aos-delay="300"
+                    <div
+                        className="como-eu-penso-card"
+                        data-aos="fade-left"
+                        data-aos-delay="175"
                         style={{
                             "--card-color": "#00FFFF",
                             "--shadow-color": "#00FFFF"
@@ -80,10 +80,10 @@ const ComoEuPenso = () => {
                         </div>
                     </div>
 
-                    <div 
-                        className="como-eu-penso-card" 
-                        data-aos="fade-right" 
-                        data-aos-delay="700"
+                    <div
+                        className="como-eu-penso-card"
+                        data-aos="fade-right"
+                        data-aos-delay="200"
                         style={{
                             "--card-color": "#2ECC71",
                             "--shadow-color": "#2ECC71"
@@ -106,10 +106,10 @@ const ComoEuPenso = () => {
                         </div>
                     </div>
 
-                    <div 
-                        className="como-eu-penso-card" 
-                        data-aos="fade-left" 
-                        data-aos-delay="800"
+                    <div
+                        className="como-eu-penso-card"
+                        data-aos="fade-left"
+                        data-aos-delay="225"
                         style={{
                             "--card-color": "#FFE100",
                             "--shadow-color": "#FFE100"

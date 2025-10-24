@@ -64,7 +64,7 @@ const ResultsSection = () => {
     return (
         <section id="results" className="results-section">
             <Container>
-                <div className="results-header text-center mb-5">
+                <div className="results-header">
                     <h2 className="results-title" data-aos="fade-up">
                         {language === "pt"
                             ? "O Que Meus Clientes Dizem"
@@ -77,40 +77,42 @@ const ResultsSection = () => {
                     </p>
                 </div>
 
-                <Carousel
-                    className="results-carousel"
-                    indicators={false}
-                    controls={true}
-                    interval={null}
-                    pause="hover"
-                    wrap={true}
-                >
-                    {results.map((result, index) => (
-                        <Carousel.Item key={result.id}>
-                            <div className="result-card-carousel">
-                                <div className="result-image-container">
-                                    <img
-                                        src={result.image}
-                                        alt={`Review ${result.id}`}
-                                        className="result-image"
-                                        loading="lazy"
-                                    />
+                <div className="results-carousel-container">
+                    <Carousel
+                        className="results-carousel"
+                        indicators={false}
+                        controls={true}
+                        interval={null}
+                        pause="hover"
+                        wrap={true}
+                    >
+                        {results.map((result, index) => (
+                            <Carousel.Item key={result.id}>
+                                <div className="result-card-carousel">
+                                    <div className="result-image-container">
+                                        <img
+                                            src={result.image}
+                                            alt={`Review ${result.id}`}
+                                            className="result-image"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div className="result-content">
+                                        <div className="result-summary">
+                                            <p>{result.summary}</p>
+                                        </div>
+                                        <div className="result-outcome">
+                                            <p className="result-highlight">{result.result}</p>
+                                        </div>
+                                        <div className="result-quote">
+                                            <blockquote>"{result.quote}"</blockquote>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="result-content">
-                                    <div className="result-summary">
-                                        <p>{result.summary}</p>
-                                    </div>
-                                    <div className="result-outcome">
-                                        <p className="result-highlight">{result.result}</p>
-                                    </div>
-                                    <div className="result-quote">
-                                        <blockquote>"{result.quote}"</blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </div>
             </Container>
         </section>
     );

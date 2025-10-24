@@ -45,6 +45,31 @@
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 0 8px 32px 0 rgba(52, 191, 255, 0.342);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.intro-text:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px 0 rgba(82, 150, 177, 0.4);
+    border-color: rgba(82, 150, 177, 0.3);
+}
+
+.intro-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(118, 200, 233, 0.25), transparent);
+    transition: left 1.5s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.intro-text:hover::before {
+    left: 100%;
 }
 .intro-text h1 {
     font-family: monospace;
@@ -119,6 +144,8 @@
 .intro-content {
     text-align: left;
     flex: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .avatar {
@@ -126,6 +153,8 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {

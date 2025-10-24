@@ -1,5 +1,5 @@
 .results-section {
-    padding: 80px 0;
+    padding: 10px 0;
     background: radial-gradient(
         ellipse at center,
         rgba(0, 108, 151, 0.5) 0%,
@@ -7,8 +7,8 @@
         rgb(0, 0, 0) 100%
     );
     position: relative;
-    overflow: hidden;
-    min-height: 95vh;
+    overflow: visible;
+    min-height: 100vh;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
@@ -22,11 +22,31 @@
 .results-section .container {
     position: relative;
     z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .results-header {
-    margin-bottom: 60px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
 }
+
+.results-carousel-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px; /* Espaço para o header fixo */
+}
+
 
 .results-title {
     font-size: 2.5rem;
@@ -54,6 +74,7 @@
 /* Carousel Styles */
 .results-carousel .carousel-indicators {
     bottom: -50px;
+    min-height: 60vh;
 }
 
 .results-carousel .carousel-indicators button {
@@ -78,10 +99,10 @@
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.45);
     border-radius: 50%;
-    top: 50%;
+    top: 50%; /* Center vertically in the carousel container */
     transform: translateY(-50%);
     backdrop-filter: blur(10px);
-    position: absolute;
+    position: absolute; /* Position relative to carousel container */
     z-index: 3;
     transition: all 0.3s ease;
 }
@@ -94,11 +115,11 @@
 }
 
 .results-section .carousel-control-prev {
-    left: 2%;
+    left: -70px; /* Position outside the carousel container */
 }
 
 .results-section .carousel-control-next {
-    right: 2%;
+    right: -70px; /* Position outside the carousel container */
 }
 
 .results-carousel .carousel-control-prev-icon,
@@ -106,8 +127,17 @@
     filter: invert(1);
 }
 
+.results-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .result-card-carousel {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 0;
@@ -116,18 +146,19 @@
     overflow: hidden;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 30px auto;
     height: auto;
-    min-height: 600px;
+    min-height: 400px;
+    max-height: 850px;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
 .result-card-carousel:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px 0 rgba(82, 150, 177, 0.4);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px 0 rgba(82, 150, 177, 0.5);
     border-color: rgba(82, 150, 177, 0.3);
 }
 
@@ -137,7 +168,7 @@
     border-radius: 20px 20px 0 0;
     height: auto;
     max-height: 550px;
-    min-height: 380px;
+    min-height: 150px;
     flex-shrink: 0;
 }
 
@@ -213,6 +244,20 @@
         padding: 60px 0;
     }
 
+    .results-header {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .results-carousel-container {
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+
     .results-title {
         font-size: 2rem;
     }
@@ -256,18 +301,25 @@
     .results-section .carousel-control-next {
         width: 40px;
         height: 40px;
+        position: fixed; /* Back to fixed for mobile */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .results-section .carousel-control-prev {
-        left: 2%;
+        left: 15px; /* Fixed position for mobile */
     }
 
     .results-section .carousel-control-next {
-        right: 2%;
+        right: 15px; /* Fixed position for mobile */
     }
 }
 
 @media (max-width: 576px) {
+    .results-header {
+        margin-bottom: 20px;
+    }
+
     .results-title {
         font-size: 1.8rem;
     }
