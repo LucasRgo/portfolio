@@ -4,15 +4,12 @@ import {
     FaJsSquare,
     FaHtml5,
     FaFlask,
-    FaDatabase,
     FaDocker,
 } from "react-icons/fa";
 import {
     SiDjango,
     SiTypescript,
-    SiC,
     SiPostgresql,
-    SiSqlite,
     SiGit,
 } from "react-icons/si";
 import "./skills.css";

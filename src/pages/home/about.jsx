@@ -1,5 +1,5 @@
 import "./about.css";
-import profilePic from "/dark.png";
+import profilePic from "/dark_sem.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useContext } from "react";
@@ -19,8 +19,9 @@ const About = () => {
                     ? "POR QUE EMPRESAS E EMPREENDEDORES CONFIAM EM MIM?"
                     : "WHY DO COMPANIES AND FOUNDERS TRUST ME?"}
             </h2>
-            <div className="about-content" data-aos="fade-up" data-aos-delay="500">
-                <div className="about-image-wrapper">
+            <div className="about-content" data-aos="fade-up" data-aos-delay="250">
+                <div className="about-image-wrapper rounded-5">
+                    <div className="about-image-card rounded-5"></div>
                     <img className="about-image rounded-5" src={profilePic} alt="Lucas 'CJ'" />
                 </div>
                 <div className="about-text-overlay">
@@ -28,7 +29,7 @@ const About = () => {
                         <h4 className="about-subtitle" data-aos="fade-down" data-aos-delay="300">
                             {language === "pt"
                                 ? '"Meu código não é só limpo ele é ESTRATÉGICO"'
-                                : '"My code isn\'t just clean it\'s STRATEGIC"'}
+                                : "\"My code isn't just clean it's STRATEGIC\""}
                         </h4>
                         <p>
                             {language === "pt" ? (
@@ -61,8 +62,15 @@ const About = () => {
                                     ? "aumentei vendas online em 123%"
                                     : "increased online sales by 123%"}
                             </strong>
-                            {language === "pt" ? " e construí sistemas que processam " : " and built systems that process "}
-                            <strong>{language === "pt" ? "milhares de transações mensais" : "thousands of monthly transactions"}</strong>.
+                            {language === "pt"
+                                ? " e construí sistemas que processam "
+                                : " and built systems that process "}
+                            <strong>
+                                {language === "pt"
+                                    ? "milhares de transações mensais"
+                                    : "thousands of monthly transactions"}
+                            </strong>
+                            .
                         </p>
                         <p>
                             {language === "pt"
@@ -70,7 +78,9 @@ const About = () => {
                                 : "If you're looking for a developer who understands both "}
                             <span className="code-highlight">{language === "pt" ? "código" : "code"}</span>
                             {language === "pt" ? " quanto de " : " and "}
-                            <span className="business-highlight">{language === "pt" ? "negócio" : "business"}</span>
+                            <span className="business-highlight">
+                                {language === "pt" ? "negócio" : "business"}
+                            </span>
                             {language === "pt"
                                 ? ", vamos conversar sobre seu próximo "
                                 : ", let's talk about your next "}

@@ -34,6 +34,17 @@
     }
 }
 
+@keyframes imageGlow {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.02);
+        opacity: 0.6;
+    }
+}
+
 .about-heading {
     font-family: monospace;
     font-size: 2.5rem;
@@ -65,11 +76,42 @@
     justify-content: center;
 }
 
+.about-image-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    z-index: 0;
+    box-shadow: 0 15px 35px rgba(40, 94, 138, 0.3),
+        0 5px 15px rgba(82, 150, 177, 0.2),
+        inset 0 0 15px rgba(82, 150, 177, 0.1);
+}
+
+.about-image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(82, 150, 177, 0.7) 0%, rgba(40, 94, 138, 0.4) 30%, transparent 70%);
+    animation: imageGlow 6s ease-in-out infinite;
+    z-index: 1;
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
 .about-image {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 2;
+    position: relative;
     box-shadow: -15px 0 40px rgba(82, 150, 177, 0.4),
         -20px 0 60px rgba(82, 150, 177, 0.2),
         -25px 0 80px rgba(82, 150, 177, 0.1);
@@ -101,7 +143,7 @@
     margin-bottom: auto;
     margin-left: 4rem;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
     border-radius: 15px;
     z-index: 2;
     box-shadow: 0 15px 35px rgba(40, 94, 138, 0.2),
@@ -193,6 +235,7 @@
         margin: 0;
         padding: 0;
         max-width: 100%;
+        border-radius: 10px;
     }
 
     .about-image {
@@ -202,6 +245,21 @@
         border-radius: 10px;
         margin: 0 auto;
         display: block;
+        z-index: 2;
+        position: relative;
+    }
+
+    .about-image-card {
+        width: 95%;
+        height: auto;
+        border-radius: 10px;
+        z-index: 0;
+    }
+
+    .about-image-wrapper::after {
+        width: 110%;
+        height: 110%;
+        filter: blur(15px);
     }
 
     .image-overlay-text {
