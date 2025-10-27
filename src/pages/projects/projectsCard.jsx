@@ -80,17 +80,19 @@ const ProjectCard = ({ project }) => {
                                 >
                                     ›
                                 </button>
-                                <div className="carousel-indicators">
-                                    {project.mediaContent.map((_, index) => (
-                                        <button
-                                            type="button"
-                                            key={`${project.id}-indicator-${index}`}
-                                            className={`carousel-dot ${index === activeCarouselIndex ? 'active' : ''}`}
-                                            onClick={() => setActiveCarouselIndex(index)}
-                                            aria-label={`Go to slide ${index + 1}`}
-                                        />
-                                    ))}
-                                </div>
+                                {project.id !== 2 && (
+                                    <div className="carousel-indicators">
+                                        {project.mediaContent.map((_, index) => (
+                                            <button
+                                                type="button"
+                                                key={`${project.id}-indicator-${index}`}
+                                                className={`carousel-dot ${index === activeCarouselIndex ? 'active' : ''}`}
+                                                onClick={() => setActiveCarouselIndex(index)}
+                                                aria-label={`Go to slide ${index + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
                             </>
                         )}
                     </div>
@@ -125,7 +127,7 @@ const ProjectCard = ({ project }) => {
                         <span className="project-subtitle"> - {project.subtitle}</span>
                     </h3>
                 </div>
-                <p>{project.description}</p>
+                <p className="projects-p">{project.description}</p>
             </div>
         </div>
     );

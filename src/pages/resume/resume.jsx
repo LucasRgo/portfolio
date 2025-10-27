@@ -19,9 +19,7 @@ const Resume = () => {
                     href={resumeUrl}
                     download="CURRICULO_Lucas_Goveia_Desenvolvedor_Fullstack.pdf"
                     className="resume-download">
-                    {language === "pt"
-                        ? "Baixar Currículo (Português)"
-                        : "Download Resume (Portuguese)"}
+                    Baixar Currículo (Português)
                 </a>
                 <a
                     data-aos="flip-up"
@@ -29,7 +27,7 @@ const Resume = () => {
                     href={resumeEnUrl}
                     download="RESUME_Lucas_Goveia_Fullstack_Developer.pdf"
                     className="resume-download">
-                    {language === "pt" ? "Download Resume (English)" : "Download Resume (English)"}
+                    Download Resume (English)
                 </a>
             </div>
 

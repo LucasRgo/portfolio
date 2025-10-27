@@ -199,6 +199,7 @@
     height: 100%;
     border-radius: 35px 35px 0 0;
     object-fit: cover;
+    transition: transform 0.5s ease-out;
 }
 
 .project-content {
@@ -357,11 +358,11 @@
 
 
     #projects-heading {
-        font-size: 15vw;
+        font-size: 0.5rem;
     }
 
     #projects-p {
-        font-size: 6vw;
+        font-size: 0.1rem;
         text-align: center;
     }
 
