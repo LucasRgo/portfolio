@@ -165,7 +165,7 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.6);
     color: #f1f1f1;
-    width: 70vw;
+    width: 50vw;
     height: auto;
     border-radius: 35px;
     margin-top: 20px;
@@ -187,6 +187,12 @@
     background-color: #000; /* Optional: Placeholder background for iframe */
 }
 
+.project-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .project-image {
     position: relative;
     width: 100%;
@@ -204,7 +210,7 @@
 }
 
 .project-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #ffffff;
     margin: 0;
     text-justify: inter-word;
@@ -215,7 +221,7 @@
 
 .project-title {
     display: inline;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #ffffff;
     text-justify: inter-word;
@@ -225,7 +231,7 @@
 
 .project-subtitle {
     display: inline;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #ffffff;
     opacity: 0.9;
@@ -234,7 +240,7 @@
 }
 
 .project-content p {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     text-align: justify;
     color: #e4e4e4;
     z-index: 6;
@@ -279,6 +285,62 @@
     margin-bottom: 10px;
 }
 
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 8;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 8;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+
+.carousel-dot:hover,
+.carousel-dot.active {
+    transform: scale(1.2);
+    background: rgba(255, 255, 255, 0.9);
+}
+
 
 @media (max-width: 768px) {
     .projects-container {
@@ -306,7 +368,7 @@
 
     /* Ensure each project takes the full width in smaller screens */
     .project-card {
-        width: 90vw; /* Increase width on small screens */
+        width: 80vw; /* Increase width on small screens */
         border-radius: 35px;
         margin-top: 5px;
         margin-bottom: 5px;
@@ -316,20 +378,35 @@
         border-radius: 10px 10px 0px 0px;
     }
 
+    .carousel-button {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-indicators {
+        gap: 0.4rem;
+    }
+
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+
     .project-header h3 {
-        font-size: 1.2rem; /* Adjust title size */
+        font-size: 1.1rem; /* Adjust title size */
     }
 
     .project-title {
-        font-size: 1.4rem; /* Adjust project title size */
+        font-size: 1.3rem; /* Adjust project title size */
     }
 
     .project-subtitle {
-        font-size: 1.3rem; /* Adjust subtitle size */
+        font-size: 1.2rem; /* Adjust subtitle size */
     }
 
     .project-content p {
-        font-size: 1rem; /* Adjust description size */
+        font-size: 0.95rem; /* Adjust description size */
     }
 
     #play {

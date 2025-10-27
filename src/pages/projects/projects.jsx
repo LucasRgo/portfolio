@@ -3,17 +3,26 @@ import "./projects.css";
 import ProjectCard from "./projectsCard";
 import { LanguageContext } from "../../components/LanguageContext";
 import a1 from "/a1.webp";
-import commerce from "/commerce.webp";
-import movie from "/movie.webp";
-import flow from "/flow.webp";
-import neidi from "/neidi.webp";
 import AOS from "aos";
 import objectDectition from "/objectDetection.png";
+import agendai from "/dash.webp";
+import commerce from "/commerce.webp";
+import flow from "/flow.webp";
+import movie from "/movie.webp";
+import neidi from "/neidi.webp";
 import "aos/dist/aos.css";
 
 const Projects = () => {
     const { language } = useContext(LanguageContext);
     const firstProjectRef = useRef(null);
+
+    const paraplaceImages = [
+        "/1.webp",
+        "/2.webp",
+        "/3.webp",
+        "/4.webp",
+        "/5.webp",
+    ];
 
     const handleScrollToFirstProject = () => {
         firstProjectRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -26,148 +35,134 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Movie Wizard",
+            title: "AgendAI",
             subtitle:
                 language === "pt"
-                    ? "Uma aplicação web para recomendações personalizadas de filmes, avaliações e gerenciamento de lista de filmes para assistir."
-                    : "A web application for personalized movie recommendations, ratings, and watchlist management.",
+                    ? "SaaS multi tenant com agente de IA no WhatsApp para gestão automatizada de salões e barbearias."
+                    : "Multi tenant SaaS with AI agent on WhatsApp for automated salon and barbershop management.",
             description:
                 language === "pt"
-                    ? `Originalmente desenvolvido usando Flask, a versão mais recente foi reconstruída com Django e React para melhor desempenho e escalabilidade.
-                   Este é o projeto do qual mais me orgulho, apresentando uma interface de usuário elegante e interativa, junto com um backend robusto.
-                   Inclui um script de recomendação personalizado que sugere filmes com base nas suas preferências.
-                   Além disso, os usuários podem pesquisar filmes e explorar páginas individuais de filmes, que mostram sugestões de filmes semelhantes.`
-                    : `Originally developed using Flask, the latest version has been rebuilt with Django and React for improved performance and scalability.
-                   This is the project I am most proud of, featuring a sleek and interactive user interface coupled with a robust backend.
-                   It includes a custom recommendation script that suggests movies based on your preferences.
-                   Additionally, users can search for movies and explore individual movie pages, which showcase similar movie suggestions.`,
-            image: movie,
-            youtubeUrl: "YWIYZWkl66I?start=7",
+                    ? `SaaS completo com arquitetura multi tenant escalável, featuring agente de IA integrado ao WhatsApp que processa agendamentos em linguagem natural. Inclui sistema de pagamentos recorrentes automatizado, dashboard de insights financeiros e gestão completa de clientes. Projeto próprio em produção com clientes ativos, demonstrando expertise em arquitetura enterprise, IA aplicada a negócios e capacidade de entregar soluções do conceito ao mercado.`
+                    : `Complete SaaS with scalable multi tenant architecture, featuring AI agent integrated with WhatsApp that processes bookings in natural language. Includes automated recurring payment system, financial insights dashboard, and complete client management. Own project in production with active clients, demonstrating expertise in enterprise architecture, applied AI for business, and ability to deliver solutions from concept to market.`,
+            image: agendai,
+            mediaType: "youtube",
+            youtubeUrl: "cIUXZlHVqK0",
         },
         {
             id: 2,
-            title: "Flow Reader",
-            subtitle:
-                language === "pt"
-                    ? "Um leitor de PDF com exibição palavra-por-palavra para aumentar a velocidade de leitura e reduzir distrações."
-                    : "A PDF reader with a word-by-word display to enhance reading speed and reduce distractions.",
+        title: "ParaPlace",
+        subtitle:
+            language === "pt"
+                ? "Marketplace especializado em parapentes com arquitetura Docker escalável e chat em tempo real."
+                    : "Specialized paragliding marketplace with scalable Docker architecture and real time chat.",
             description:
                 language === "pt"
-                    ? `Construído com React no frontend e Django no backend, o Flow Reader é uma aplicação web projetada para otimizar a leitura.
-                   Os usuários podem fazer upload de livros em PDF e lê-los com uma exibição palavra-por-palavra, ajustando a velocidade das transições.
-                   A plataforma também possui um sistema inteligente que ajusta os intervalos de palavras com base na pontuação.
-                   Além disso, ele se lembra da última página que o usuário estava lendo, para que possam facilmente continuar de onde parou.`
-                    : `Built with React on the frontend and Django on the backend, Flow Reader is a web application designed to optimize reading.
-                   Users can upload PDF books and read them with a word-by-word display, adjusting the speed of word transitions.
-                   The platform also features an intelligent system that adjusts word intervals based on punctuation.
-                   Additionally, it remembers the last page the user was reading, so they can easily pick up where they left off.`,
-            image: flow,
-            youtubeUrl: "PSks1SQWFGM",
+                    ? `Marketplace de nicho desenvolvido com Django e arquitetura Docker preparada para alta demanda. Integra Stripe Connect para pagamentos seguros, WebSockets para chat em tempo real, autenticação social e busca inteligente com filtros avançados. Sistema de notificações dinâmico e SEO técnico otimizado completam a solução enterprise pronta para escalar com milhares de usuários simultâneos.`
+                    : `Niche marketplace built with Django and Docker architecture prepared for high demand. Integrates Stripe Connect for secure payments, WebSockets for real time chat, social authentication, and intelligent search with advanced filters. Dynamic notification system and optimized technical SEO complete the enterprise solution ready to scale with thousands of concurrent users.`,
+            image: paraplaceImages[0],
+            mediaType: "carousel",
+            mediaContent: paraplaceImages,
         },
         {
             id: 3,
+            title: "Movie Wizard",
+            subtitle:
+                language === "pt"
+                    ? "Uma aplicação web para recomendações personalizadas de filmes."
+                    : "A web application for personalized movie recommendations, ratings, and watchlist management.",
+            description:
+                language === "pt"
+                    ? `Plataforma full stack desenvolvida com Django e React que oferece recomendações personalizadas através de algoritmo customizado. Interface moderna e responsiva com sistema de busca avançada, páginas detalhadas de filmes e sugestões de conteúdo similar. Migrado de Flask para Django para otimização de performance e escalabilidade.`
+                    : `Full stack platform built with Django and React featuring a custom recommendation algorithm. Modern, responsive interface with advanced search, detailed movie pages, and similar content suggestions. Migrated from Flask to Django for enhanced performance and scalability.`,
+            image: movie,
+            mediaType: "youtube",
+            mediaContent: "YWIYZWkl66I?start=7",
+        },
+        {
+            id: 4,
+            title: "Flow Reader",
+            subtitle:
+                language === "pt"
+                    ? "Um leitor de PDF com exibição palavra por palavra para aumentar a velocidade de leitura e reduzir distrações."
+                    : "A PDF reader with a word-by-word display to enhance reading speed and reduce distractions.",
+            description:
+                language === "pt"
+                    ? `Aplicação React e Django que revoluciona a experiência de leitura digital com exibição palavra por palavra em velocidade ajustável. Sistema inteligente de pausas baseado em pontuação e funcionalidade de bookmark automático. Interface intuitiva focada em produtividade e retenção de conteúdo.`
+                    : `React and Django application that revolutionizes digital reading with adjustable word by word display. Intelligent punctuation based pause system and automatic bookmark functionality. Intuitive interface focused on productivity and content retention.`,
+            image: flow,
+            mediaType: "youtube",
+            mediaContent: "PSks1SQWFGM",
+        },
+        {
+            id: 5,
             title:
                 language === "pt"
                     ? "Detecção de Objetos em Vídeo em Tempo Real"
-                    : "Real-Time Video Object Detection",
+                    : "Real Time Video Object Detection",
             subtitle:
                 language === "pt"
                     ? "Um sistema de detecção com IA com ajustes de confiança e IoU em tempo real."
                     : "An AI detection system with real-time confidence and IoU adjustments.",
             description:
                 language === "pt"
-                    ? `Este projeto combina Flask e um modelo ONNX no backend com um frontend React usando Fabric.js para fornecer detecção de objetos em vídeo em tempo real.
-                   Os usuários podem ajustar os limiares de confiança e IoU, vendo instantaneamente como essas mudanças afetam a precisão da detecção através de um painel dinâmico.
-                   O sistema oferece uma integração perfeita de IA e visualização interativa, facilitando o ajuste fino dos parâmetros do modelo e a visualização dos resultados em tempo real,
-                   demonstrando o poder das aplicações de IA full-stack na análise de vídeo.`
-                    : `This project combines Flask and an ONNX model on the backend with a React frontend using Fabric.js to deliver real-time video object detection. 
-                   Users can adjust confidence and IoU thresholds, instantly seeing how these changes affect detection accuracy through a dynamic dashboard. 
-                   The system offers a seamless integration of AI and interactive visualization, making it easy to fine-tune model parameters and view the results in real-time, 
-                   demonstrating the power of full-stack AI applications in video analysis.`,
+                    ? `Solução de IA integrando Flask, modelo ONNX e React com Fabric.js para detecção de objetos em tempo real. Dashboard interativo permite ajuste dinâmico de parâmetros (confiança e IoU) com visualização instantânea dos resultados. Demonstra expertise em machine learning aplicado e arquitetura full stack de IA.`
+                    : `AI solution integrating Flask, ONNX model, and React with Fabric.js for real time object detection. Interactive dashboard enables dynamic parameter adjustment (confidence and IoU) with instant result visualization. Demonstrates expertise in applied machine learning and full stack AI architecture.`,
             image: objectDectition,
-            youtubeUrl: "4jSHvC8fDk0?start=6",
+            mediaType: "youtube",
+            mediaContent: "4jSHvC8fDk0?start=6",
         },
         {
-            id: 4,
+            id: 6,
             title: "Neidi Cred",
             subtitle:
                 language === "pt"
-                    ? "Um site de vendas completo onde os usuários podem ver preços e calcular parcelas mensais."
-                    : "A complete sales website where users can view prices and calculate monthly installments.",
+                    ? "Landing page de alta conversão que gerou +123% de aumento nas vendas online."
+                    : "High conversion landing page that generated +123% increase in online sales.",
             description:
                 language === "pt"
-                    ? `Construído com JavaScript puro e HTML/CSS nativo, o NeidiCred reflete meu domínio dos fundamentos da engenharia de software para criar soluções de alto impacto. O site combina um design limpo e consistente com recursos interativos, como uma calculadora de ofertas de lances e carrosséis, além de uma barra de contato que simplifica a captura de informações dos usuários, enviando-as diretamente ao e-mail da empresa.`
-                    : `Built using plain JavaScript and raw HTML/CSS, Neidi Cred showcases the power of mastering the basics.
-                   The website not only features a clean and consistent design but also includes interactive elements like a bid calculator and carousels.
-                   The standout feature is the contact bar, where users can easily input their contact information, which is then sent directly to the company's email address.`,
+                    ? `Projeto que aumentou as vendas online em 123% através de landing page desenvolvida com JavaScript puro, HTML e CSS. Combina engenharia front end otimizada, SEO técnico e design estratégico focado em conversão. Features incluem calculadora de lances interativa, sistema de captura de leads integrado ao email e interface que transmite credibilidade profissional.`
+                    : `Project that increased online sales by 123% through a landing page built with vanilla JavaScript, HTML and  CSS. Combines optimized front end engineering, technical SEO, and strategic conversion focused design. Features include interactive bid calculator, lead capture system integrated with email, and interface that conveys professional credibility.`,
             image: neidi,
-            youtubeUrl: "https://neidicred.com.br",
+            mediaType: "link",
+            mediaContent: "https://neidicred.com.br",
         },
         {
-            id: 5,
-            title:
-                language === "pt"
-                    ? "Exercício de comércio CS50"
-                    : "CS50 commerce exercise",
+            id: 7,
+            title: language === "pt" ? "Exercício de comércio CS50" : "CS50 commerce exercise",
             subtitle:
                 language === "pt"
                     ? "Um site de leilões onde os usuários podem criar listagens, fazer lances e gerenciar uma lista de observação."
                     : "An auction site where users can create listings, place bids, and manage a watchlist.",
             description:
                 language === "pt"
-                    ? `Construído com Django e HTML/CSS, este site de leilões permite aos usuários criar listagens, fazer lances e gerenciar sua lista de observação.
-                   Os usuários também podem comentar nas listagens, fechar leilões e navegar por itens por categoria.
-                   Demonstra minha capacidade de integrar perfeitamente o backend e o frontend, lidar com autenticação de usuários e gerenciar bancos de dados.`
-                    : `Built with Django and HTML/CSS, this auction site allows users to create listings, place bids, and manage their watchlist.
-                   Users can also comment on listings, close auctions, and browse items by category.
-                   It showcases my ability to seamlessly integrate the backend and frontend, handle user authentication, and manage databases.`,
+                    ? `Plataforma de leilões construída com Django implementando autenticação completa, CRUD de listagens, sistema de lances em tempo real e watchlist personalizada. Inclui funcionalidades de comentários, categorização de produtos e encerramento de leilões. Projeto que solidificou conhecimentos em arquitetura MVC e gerenciamento de banco de dados.`
+                    : `Auction platform built with Django implementing complete authentication, listing CRUD, real time bidding system, and personalized watchlist. Includes comment functionality, product categorization, and auction closing. Project that solidified knowledge in MVC architecture and database management.`,
             image: commerce,
-            youtubeUrl: "4zg9OpkBTSA",
+            mediaType: "youtube",
+            mediaContent: "4zg9OpkBTSA",
         },
     ];
 
     return (
         <>
             <div className="projects-container">
-                <div
-                    className="projects-content"
-                    data-aos="flip-up"
-                    data-aos-delay="400"
-                >
-                    <h1 id="projects-heading">
-                        {language === "pt" ? "PROJETOS" : "PROJECTS"}
-                    </h1>
+                <div className="projects-content" data-aos="flip-up" data-aos-delay="250">
+                    <h1 id="projects-heading">{language === "pt" ? "PROJETOS" : "PROJECTS"}</h1>
                     <p id="projects-p">
                         {language === "pt"
                             ? "Aqui estão alguns dos meus trabalhos mais prestigiados"
                             : "Here are some of my most prestigious works"}
                     </p>
-                    <button
-                        onClick={handleScrollToFirstProject}
-                        className="contact-button rounded-3"
-                    >
-                        {language === "pt"
-                            ? "Iniciar o Tour"
-                            : "Start the Tour"}
+                    <button onClick={handleScrollToFirstProject} className="contact-button rounded-3">
+                        {language === "pt" ? "Iniciar o Tour" : "Start the Tour"}
                     </button>
                 </div>
-                <img
-                    id="projects"
-                    src={a1}
-                    alt={
-                        language === "pt"
-                            ? "Fundo de código"
-                            : "Code background"
-                    }
-                />
+                <img id="projects" src={a1} alt={language === "pt" ? "Fundo de código" : "Code background"} />
             </div>
             <div className="my-projects">
                 <div className="projects-container">
                     {projects.map((project, index) => (
-                        <div
-                            key={project.id}
-                            ref={index === 0 ? firstProjectRef : null}
-                        >
+                        <div key={project.id} ref={index === 0 ? firstProjectRef : null}>
                             <ProjectCard project={project} />
                         </div>
                     ))}
