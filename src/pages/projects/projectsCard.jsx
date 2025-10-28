@@ -53,7 +53,7 @@ const ProjectCard = ({ project }) => {
     };
 
     return (
-        <div className="project-card" data-aos="fade-up" data-aos-delay="300" id="project">
+        <div className="project-card" data-aos="fade-up" data-aos-delay="150" id="project">
             <div className="project-image-container">
                 {isCarousel ? (
                     <div className="project-carousel">
@@ -127,7 +127,7 @@ const ProjectCard = ({ project }) => {
                         <span className="project-subtitle"> - {project.subtitle}</span>
                     </h3>
                 </div>
-                <p className="projects-p">{project.description}</p>
+                <p className="projects-p text-start">{project.description}</p>
             </div>
         </div>
     );

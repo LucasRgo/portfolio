@@ -11,7 +11,7 @@ import Skills from "./skills";
 import ResultsSection from "./results";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import perfil from "/natural2.jpg";
+import perfil from "/pic.webp";
 import Avatar from "@mui/material/Avatar";
 
 const Home = () => {
