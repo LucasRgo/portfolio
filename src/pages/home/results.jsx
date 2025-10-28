@@ -24,8 +24,8 @@ const ResultsSection = () => {
             id: 2,
             image: "/score/2.jpeg",
             summary: language === "pt" 
-                ? "Landing Page otimizada para SEO local com foco em conversão." 
-                : "Landing Page optimized for local SEO with focus on conversion.",
+                ? "Site de vendas otimizado para SEO local com foco em conversão." 
+                : "Sales website optimized for local SEO with focus on conversion.",
             result: language === "pt"
                 ? "+123% em vendas online e posição de destaque no Google."
                 : "+123% in online sales and prominent position on Google.",
