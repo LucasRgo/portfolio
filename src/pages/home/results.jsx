@@ -35,16 +35,16 @@ const ResultsSection = () => {
         },
         {
             id: 3,
-            image: "/score/3.jpeg",
+            image: "/score/3.png",
             summary: language === "pt"
                 ? "Landing Page de alta conversão com funil de vendas e gatilhos psicológicos (timers, escassez digital, vagas dinâmicas)."
                 : "High-conversion Landing Page with sales funnel and psychological triggers (timers, digital scarcity, dynamic slots).",
             result: language === "pt"
-                ? "5x mais conversões."
-                : "5x more conversions.",
+                ? "5x mais conversões, 2 projetos diferentes."
+                : "5x more conversions, across 2 different projects.",
             quote: language === "pt"
-                ? "Profissional extremamente competente e criativo."
-                : "Extremely competent and creative professional."
+                ? "Segundo trabalho com o Lucas, mais uma vez excelente. Profissional extremamente competente e criativo!"
+                : "Second project with Lucas, once again excellent. Extremely competent and creative professional!"
         },
         {
             id: 4,
