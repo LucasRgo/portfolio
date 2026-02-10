@@ -137,6 +137,9 @@
 }
 
 .result-card-carousel {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;

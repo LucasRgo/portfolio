@@ -114,7 +114,12 @@ const ResultsSection = () => {
                     >
                         {results.map((result, index) => (
                             <Carousel.Item key={result.id}>
-                                <div className="result-card-carousel">
+                                <a
+                                    href="https://www.workana.com/freelancer/68c63f846c83b33c90392e8b8bf06fd0"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="result-card-carousel"
+                                >
                                     <div className="result-image-container">
                                         <img
                                             src={result.image}
@@ -134,7 +139,7 @@ const ResultsSection = () => {
                                             <blockquote>"{result.quote}"</blockquote>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </Carousel.Item>
                         ))}
                     </Carousel>
