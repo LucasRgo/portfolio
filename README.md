@@ -1,8 +1,59 @@
-# React + Vite
+# Portfolio - Lucas R. Goveia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal em React para apresentar projetos, habilidades, certificações e currículo de forma interativa.
 
-Currently, two official plugins are available:
+## Problema -> Solução -> Resultado
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Problema: recrutadores e clientes não conseguem avaliar rapidamente profundidade técnica e projetos reais.
+- Solução: SPA com navegação clara (`Home`, `Projects`, `Resume`), animações e conteúdo bilíngue.
+- Resultado: demonstração objetiva de experiência, com acesso rápido a cases, currículo e contato.
+
+## Stack
+
+- Front-end: React 18 + React Router
+- Build tooling: Vite 6
+- UI/estilo: Bootstrap, React Bootstrap, MUI, Font Awesome, React Icons
+- Motion/UX: Framer Motion, AOS, tsParticles
+- Documentos: React PDF + pdfjs-dist
+- Deploy: build estático + `gh-pages` (domínio configurado via `public/CNAME`)
+
+## Arquitetura
+
+Projeto SPA front-end only.
+
+```text
+[Browser]
+   |
+   v
+[React SPA (Vite build)]
+   |
+   +--> Rotas: /, /projects, /resume
+   +--> Assets estáticos (public/)
+   +--> PDFs de currículo
+
+Serviços backend: não aplicável
+DB: não aplicável
+Filas: não aplicável
+Webhooks: não aplicável
+```
+
+## Como rodar local (copy/paste)
+
+```bash
+npm install
+npm run dev
+```
+
+`docker compose up` e `make dev`: não configurados neste repositório atualmente.
+
+## Trade-offs e decisões
+
+- SPA sem backend: reduz complexidade e custo operacional, mas limita observabilidade e recursos server-side.
+- Roteamento client-side com fallback (`* -> Home`) e `404.html` no deploy: melhora compatibilidade em hospedagem estática, mas exige cuidado com deep links.
+- Context API para idioma (`LanguageContext`) em vez de i18n completo: implementação simples e rápida, com menor escalabilidade para múltiplos idiomas/formatos avançados.
+
+## Roadmap
+
+- Adicionar testes de interface (React Testing Library) para fluxos críticos.
+- Externalizar conteúdo de projetos para JSON/CMS leve para facilitar manutenção.
+- Configurar pipeline CI/CD (lint + build + deploy) com validação automática em pull request.
