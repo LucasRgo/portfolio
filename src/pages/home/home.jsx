@@ -37,8 +37,8 @@ const Home = () => {
                             <h1>{language === "pt" ? "Lucas R. Goveia" : "Lucas R. Goveia"}</h1>
                             <p>
                                 {language === "pt"
-                                    ? "Transformo ideias em SaaS lucrativos com Django + React e visão de negócio."
-                                    : "I transform ideas into profitable SaaS with Django + React and business vision."}
+                                    ? "Arquitetura e engenharia de software para escalar com confiabilidade e performance."
+                                    : "Software architecture and engineering built to scale with reliability and performance."}
                             </p>
                             <button
                                 onClick={() => window.open("mailto:lucas.lrg.0005@gmail.com", "_blank")}

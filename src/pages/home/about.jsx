@@ -14,77 +14,68 @@ const About = () => {
 
     return (
         <section className="about-container" id="about">
-            <h2 className="about-heading" data-aos="fade-down" data-aos-delay="300">
+            <h2
+                className="about-heading"
+                data-aos="fade-down"
+                data-aos-delay="300"
+            >
                 {language === "pt"
                     ? "POR QUE EMPRESAS E EMPREENDEDORES CONFIAM EM MIM?"
                     : "WHY DO COMPANIES AND FOUNDERS TRUST ME?"}
             </h2>
-            <div className="about-content" data-aos="fade-up" data-aos-delay="250">
+            <div
+                className="about-content"
+                data-aos="fade-up"
+                data-aos-delay="250"
+            >
                 <div className="about-image-wrapper rounded-5">
                     <div className="about-image-card rounded-5"></div>
-                    <img className="about-image rounded-5" src={profilePic} alt="Lucas 'CJ'" />
+                    <img
+                        className="about-image rounded-5"
+                        src={profilePic}
+                        alt="Lucas 'CJ'"
+                    />
                 </div>
                 <div className="about-text-overlay">
                     <div className="about-text">
-                        <h4 className="about-subtitle" data-aos="fade-down" data-aos-delay="300">
+                        <h4 className="about-subtitle">
                             {language === "pt"
-                                ? '"Meu código não é só limpo ele é ESTRATÉGICO"'
-                                : "\"My code isn't just clean it's STRATEGIC\""}
+                                ? '"Arquitetura sólida. Sistemas que escalam."'
+                                : '"Solid architecture. Systems that scale."'}
                         </h4>
+
                         <p>
                             {language === "pt" ? (
                                 <>
-                                    Sou <strong>Lucas Goveia</strong>, desenvolvedor fullstack especializado em{" "}
-                                    <span className="tech-highlight">Django + React</span>.
+                                    Sou <strong>Lucas R Goveia</strong>,
+                                    engenheiro de software focado em{" "}
+                                    <span className="tech-highlight">
+                                        Django + React
+                                    </span>{" "}
+                                    e sistemas distribuídos.
                                 </>
                             ) : (
                                 <>
-                                    I'm <strong>Lucas Goveia</strong>, a fullstack developer specialized in{" "}
-                                    <span className="tech-highlight">Django + React</span>.
+                                    I'm <strong>Lucas R Goveia</strong>, a
+                                    software engineer focused on{" "}
+                                    <span className="tech-highlight">
+                                        Django + React
+                                    </span>{" "}
+                                    and distributed systems.
                                 </>
                             )}
                         </p>
+
                         <p>
                             {language === "pt"
-                                ? "Não entrego apenas funcionalidades. Crio "
-                                : "I don't just deliver features. I create "}
-                            <strong className="gradient-text">
-                                {language === "pt"
-                                    ? "soluções que geram receita recorrente"
-                                    : "solutions that generate recurring revenue"}
-                            </strong>
-                            {language === "pt" ? " e escalam com o negócio." : " and scale with the business."}
+                                ? "Desenvolvo sistemas escaláveis, observáveis e prontos para produção, incluindo aplicações com IA e integrações assíncronas."
+                                : "I build scalable, observable, production-ready systems, including AI-powered applications and asynchronous integrations."}
                         </p>
-                        <p>
-                            {language === "pt" ? "Já " : "I've already "}
-                            <strong className="gradient-text">
-                                {language === "pt"
-                                    ? "aumentei vendas online em 123%"
-                                    : "increased online sales by 123%"}
-                            </strong>
-                            {language === "pt"
-                                ? " e construí sistemas que processam "
-                                : " and built systems that process "}
-                            <strong>
-                                {language === "pt"
-                                    ? "milhares de transações mensais"
-                                    : "thousands of monthly transactions"}
-                            </strong>
-                            .
-                        </p>
+
                         <p>
                             {language === "pt"
-                                ? "Se você busca um desenvolvedor que entende tanto de "
-                                : "If you're looking for a developer who understands both "}
-                            <span className="code-highlight">{language === "pt" ? "código" : "code"}</span>
-                            {language === "pt" ? " quanto de " : " and "}
-                            <span className="business-highlight">
-                                {language === "pt" ? "negócio" : "business"}
-                            </span>
-                            {language === "pt"
-                                ? ", vamos conversar sobre seu próximo "
-                                : ", let's talk about your next "}
-                            <strong>SaaS</strong>.
+                                ? "Impacto comprovado: +123% em receita e +77% em performance."
+                                : "Proven impact: +123% revenue and +77% performance improvement."}
                         </p>
                     </div>
                 </div>
