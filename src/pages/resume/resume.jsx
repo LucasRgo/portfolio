@@ -17,7 +17,7 @@ const Resume = () => {
           data-aos="flip-up"
           data-aos-delay="300"
           href={resumeUrl}
-          download="CURRICULO_Lucas_Goveia_Desenvolvedor_Fullstack.pdf"
+          download="CURRICULO_Lucas_R_Goveia_Desenvolvedor_Fullstack.pdf"
           className="resume-download"
         >
           Baixar Currículo (Português)
@@ -26,7 +26,7 @@ const Resume = () => {
           data-aos="flip-up"
           data-aos-delay="400"
           href={resumeEnUrl}
-          download="RESUME_Lucas_Goveia_Fullstack_Developer.pdf"
+          download="RESUME_Lucas_R_Goveia_Fullstack_Developer.pdf"
           className="resume-download"
         >
           Download Resume (English)
