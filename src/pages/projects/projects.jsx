@@ -30,7 +30,16 @@ const Projects = () => {
 
     useEffect(() => {
         AOS.init();
-    }, []);
+        AOS.refreshHard();
+
+        const timeoutId = window.setTimeout(() => {
+            AOS.refreshHard();
+        }, 150);
+
+        return () => {
+            window.clearTimeout(timeoutId);
+        };
+    }, [language]);
 
     const projects = [
         {

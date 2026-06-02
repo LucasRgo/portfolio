@@ -1,7 +1,6 @@
 // ProjectCard.jsx
 import React, { useEffect, useState } from 'react';
 import './projects.css';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const ProjectCard = ({ project }) => {
@@ -11,10 +10,6 @@ const ProjectCard = ({ project }) => {
     const isYoutube = project.mediaType === 'youtube';
     const isCarousel = project.mediaType === 'carousel' && Array.isArray(project.mediaContent);
     const youtubeId = project.youtubeUrl || project.mediaContent;
-
-    useEffect(() => {
-        AOS.init();
-    }, []);
 
     useEffect(() => {
         setWasPlayButtonClicked(false);

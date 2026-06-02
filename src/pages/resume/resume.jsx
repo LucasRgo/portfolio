@@ -3,12 +3,26 @@ import resumePT from "./curriculo_Lucas_R_Goveia.pdf";
 import resumeEN from "./resume_Lucas_R_Goveia.pdf";
 import "./resume.css";
 import { LanguageContext } from "../../components/LanguageContext";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Resume = () => {
   const resumeUrl = `${resumePT}#zoom=page-width`;
   const resumeEnUrl = `${resumeEN}#zoom=page-width`;
   const { language } = useContext(LanguageContext);
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refreshHard();
+
+    const timeoutId = window.setTimeout(() => {
+      AOS.refreshHard();
+    }, 150);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, []);
 
   return (
     <div className="resume-container">
