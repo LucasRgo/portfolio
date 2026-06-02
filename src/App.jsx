@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import Home from "./pages/home/home";
 import Projects from "./pages/projects/projects";
 import Resume from "./pages/resume/resume";
+import Goiania from "./pages/goiania/goiania";
 import ScrollToTop from "./scrollTop";
 import ContactButton from "./components/contactButton";
 import LanguageProvider from "./components/LanguageContext";
@@ -52,6 +53,18 @@ function AnimatedRoutes() {
                             exit={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.5 }}>
                             <Resume />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/goiania"
+                    element={
+                        <motion.div
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.5 }}>
+                            <Goiania />
                         </motion.div>
                     }
                 />

@@ -1,6 +1,11 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import { LanguageContext } from './LanguageContext';
 import './contactButton.css';
+
+const phoneDisplay = '+55 (63) 99206-0528';
+const whatsappPhoneNumber = '5563992060528';
+const whatsappMessage = 'Olá Lucas, vim pelo seu portfólio. Podemos conversar?';
+const whatsappUrl = `https://wa.me/${whatsappPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 const ContactButton = () => {
     const { language } = useContext(LanguageContext);
@@ -79,7 +84,7 @@ const ContactButton = () => {
                         {/* Phone */}
                         <div
                             className={`contact-row ${copiedItem === 'phone' ? 'copied' : ''}`}
-                            onClick={() => handleCopy('+55 (63) 99206-0528', 'phone')}
+                            onClick={() => handleCopy(phoneDisplay, 'phone')}
                         >
                             <span className="contact-label">
                                 <i className="fas fa-phone"></i> {language === "pt" ? "Telefone" : "Phone"}
@@ -87,9 +92,23 @@ const ContactButton = () => {
                             <span className="contact-value">
                                 {copiedItem === 'phone' 
                                     ? (language === "pt" ? "Copiado!" : "Copied!") 
-                                    : '+55 (63) 99206-0528'}
+                                    : phoneDisplay}
                             </span>
                             <i className="fas fa-copy action-icon"></i>
+                        </div>
+
+                        {/* WhatsApp */}
+                        <div
+                            className="contact-row"
+                            onClick={() => window.open(whatsappUrl, '_blank', 'noopener,noreferrer')}
+                        >
+                            <span className="contact-label">
+                                <i className="fab fa-whatsapp"></i> WhatsApp
+                            </span>
+                            <span className="contact-value">
+                                {language === "pt" ? "Falar comigo" : "Message me"}
+                            </span>
+                            <i className="fas fa-external-link-alt action-icon"></i>
                         </div>
 
                         {/* LinkedIn */}
